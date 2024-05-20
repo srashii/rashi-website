@@ -8,7 +8,7 @@ const About = () => {
       </h1>
       <div className="flex flex-col-reverse md:flex-row-reverse  md:gap-20">
         <div className="max-w-lg text-pretty text-base leading-relaxed md:text-lg">
-          <p className="my-4">
+          <p>
             Hey, I am Rashi Srivastava, have almost 7 years of experience in
             Product space, I bring the expertise in building the products from
             scratch and guiding the same through 0 to 1 journey with a strong
@@ -38,8 +38,8 @@ const About = () => {
 
         <figure className="relative mb-10 h-[500px] w-full  lg:h-[600px] ">
           <Image
-            src="/assets/profile.png"
-            alt="Profile"
+            src="/assets/rashi-working.jpg"
+            alt="Rashi working from office"
             fill
             style={{ objectFit: "cover" }}
           />
