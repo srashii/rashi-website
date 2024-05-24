@@ -32,7 +32,7 @@ export const WorkSection = () => {
       })}
 
       <a
-        href="/assets/rashi_srivastava_cv.pdf"
+        href="/assets/RashiSrivastavaResume-Website.pdf"
         className="my-4 inline-flex items-center justify-center gap-1 rounded-full border-2 border-current bg-accent px-4 py-2 text-center text-base font-bold tracking-wide text-white transition-all hover:cursor-pointer hover:bg-transparent hover:text-accent dark:border-accent md:my-10"
       >
         Download CV <ArrowDownToLine size={20} />
