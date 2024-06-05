@@ -22,7 +22,7 @@ export const siteConfig = {
       timePeriod: "2021 - Present",
       description: `
       - Achieved 60% first-month retention and 80% subsequent monthly retention for CoLearn's live classes subscription product\n
-      - Achieved a remarkable 97% reduction in onboarding time by streamlining and automating the entire end-to-end process\n
+      - Attained a remarkable 97% reduction in onboarding time by streamlining and automating the entire end-to-end process\n
       - Slashed weekly support time by 60% via strategic implementation of crucial customer support data infrastructure and in-app support\n
       - Boosted paid user engagement by 12% by experimentation with a range of in-class and post-class activities\n
       - Mentored promising team members across business teams & enabled their upward movement in Product by crafting different training programs`

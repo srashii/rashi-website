@@ -60,11 +60,11 @@ const About = () => {
             2021 - Present
           </time>
           <p className="my-3">
-            Orchestrated the expansion of live classes from 1000 to over 5000
-            paid subscribers within a swift six-month period.
+          Achieved 60% first-month retention and 80% subsequent monthly retention 
+          for CoLearn's live classes subscription product
           </p>
           <p className="my-3">
-            Achieved a remarkable 97% reduction in onboarding time by
+            Attained a remarkable 97% reduction in onboarding time by
             streamlining and automating the entire end-to-end process
           </p>
           <p className="my-3">
