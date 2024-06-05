@@ -12,7 +12,7 @@ export const siteConfig = {
   socialLinks: {
     linkedIn: "https://www.linkedin.com/in/srashi",
     instagram: "https://www.instagram.com/srashi_12",
-    email: "mailto:srashi1994@gmail.com",
+    email: "mailto:srashi.product@gmail.com",
     x: "https://x.com/RashiSr65685500"
   },
   experience: [
@@ -21,7 +21,7 @@ export const siteConfig = {
       role: "Lead Product Manager",
       timePeriod: "2021 - Present",
       description: `
-      - Orchestrated the expansion of live classes from 1000 to over 5000 paid subscribers within a swift six-month period\n
+      - Achieved 60% first-month retention and 80% subsequent monthly retention for CoLearn's live classes subscription product\n
       - Achieved a remarkable 97% reduction in onboarding time by streamlining and automating the entire end-to-end process\n
       - Slashed weekly support time by 60% via strategic implementation of crucial customer support data infrastructure and in-app support\n
       - Boosted paid user engagement by 12% by experimentation with a range of in-class and post-class activities\n
