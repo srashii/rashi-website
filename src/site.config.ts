@@ -4,7 +4,7 @@ export const siteConfig = {
   firstName: 'Rashi',
   lastName: 'Srivastava',
   description: `👋 Hi, I'm Rashi Srivastava!/n
-  A versatile product manager with experience in building & scaling products./n
+  A versatile product manager with almost 7 years of experience in building & scaling products from 0 to 1./n
   Over the years, I've had the opportunity to be part of the journey on building some amazing products. I've honed my skills to deliver high quality products that adds lifetime value to the user.`,
   header: {
     logoName: 'Rashi'
