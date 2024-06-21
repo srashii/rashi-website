@@ -5,7 +5,7 @@ export const siteConfig = {
   lastName: 'Srivastava',
   description: `👋 Hi, I'm Rashi Srivastava!/n
   A versatile product manager with almost 7 years of experience in building & scaling products from 0 to 1./n
-  As a Lead Product Manager, I navigate the dynamic landscape of product development, blending innovation with user-centric design. This blog is a space where I share my experiences, insights, and occasional real-world & imaginative case studies to explore the "what-ifs" of the technology.`
+  As a Lead Product Manager, I navigate the dynamic landscape of product development, blending innovation with user-centric design. This blog is a space where I share my experiences, insights, and occasional real-world & imaginative case studies to explore the what-ifs of the technology.`
   header: {
     logoName: 'Rashi'
   },
