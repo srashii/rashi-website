@@ -12,7 +12,7 @@ export default function Blog() {
       <h1 className="my-4 font-serif text-5xl  font-bold text-accent md:text-8xl">
         My Product Journal
       </h1>
-      <p className="text-xl">Here I share my thoughts on building products, my learning experiences, and both real-world and imaginative case studies to explore the "what ifs" of technology.</p>
+      <p className="text-xl">Thoughts on building products, learning experiences, and insights on both real-world and imaginative product case studies.</p>
 
       <ul className="my-4 min-h-screen max-w-screen-md">
         {articles.map((article) => (
