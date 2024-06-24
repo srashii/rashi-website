@@ -56,7 +56,7 @@ export default async function PostPage({ params }: PostProps) {
         href="/blog"
         className="my-4 inline-flex items-center gap-2 rounded-full p-2 px-5 text-sm  uppercase tracking-wide lg:hover:bg-accent lg:hover:text-white"
       >
-        <ArrowLeft strokeWidth="1" /> Back to blog
+        <ArrowLeft strokeWidth="1" /> Back to Journal
       </a>
       <article className="mb-32 px-5 xl:px-0">
         <h1 className="my-4 font-serif text-5xl  font-bold text-accent md:text-8xl">
