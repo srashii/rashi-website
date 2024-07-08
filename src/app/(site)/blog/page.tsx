@@ -12,11 +12,17 @@ export default function Blog() {
       <h1 className="my-4 font-serif text-5xl  font-bold text-accent md:text-8xl">
         My Product Journal
       </h1>
-      <p className="text-xl">Thoughts on building products, learning experiences, and insights on both real-world and imaginative product case studies.</p>
+      <p className="text-xl">
+        Thoughts on building products, learning experiences, and insights on
+        both real-world and imaginative product case studies.
+      </p>
 
-      <ul className="my-4 min-h-screen max-w-screen-md">
+      <ul className="my-4 min-h-screen">
         {articles.map((article) => (
-          <li className="my-10" key={article._id}>
+          <li
+            className="group relative my-10 flex w-full transform items-center justify-between rounded-lg border p-4 shadow-md transition-transform hover:scale-105 hover:shadow-lg"
+            key={article._id}
+          >
             <Link
               href={`/blog/${article.slugAsParams}`}
               className="my-4 items-center gap-4 md:my-5  md:flex md:py-3"
@@ -29,9 +35,15 @@ export default function Blog() {
                 >
                   {format(parseISO(article.date), "LLLL d, yyyy")}
                 </time>
-                <p className="text-lg">{article.description}</p>
+                <p className="line-clamp-2 text-lg">{article.description}</p>
               </div>
             </Link>
+            <a
+              href={`/blog/${article.slugAsParams}`}
+              className="ml-12 mr-4 flex min-w-[150px] items-center justify-center gap-2 rounded-lg p-2 transition-colors lg:bg-accent lg:text-white"
+            >
+              <p className="text-base">Read more</p>
+            </a>
           </li>
         ))}
       </ul>
