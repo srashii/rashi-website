@@ -20,12 +20,6 @@ const About = () => {
           <p className="my-4">
           When I’m not working, you’ll find me lost in a good book 📚, cycling through new trails 🚴🏼‍♀️, planning my next travel adventure ✈️, or savoring a delicious meal 🥘. I believe that just like product management, life is about exploration, learning, and finding joy in every moment.
           </p>
-          <p className="my-4">
-            **What I’m Doing Now** 
-          </p>
-          <p>
-          Currently, I’m a Lead Product Manager at CoLearn, an edtech platform focused on the Indonesian market. I’ve been driving engagement and retention for our users, achieving a 60% first-month retention and 80% subsequent monthly retention for CoLearn's live classes, a monthly payable product. Additionally, I’ve mentored promising team members across business teams, enabling their upward movement into Product roles by crafting and delivering targeted training programs. My journey has been rewarding, and I’m excited about the challenges and opportunities that lie ahead.
-          </p>
         </div>
 
         <figure className="relative mb-10 h-[500px] w-full  lg:h-[600px] ">
@@ -81,11 +75,13 @@ const About = () => {
       {/* What i am doing now */}
      <section className="my-14">
         <div className="mb-10 text-center md:text-left">
-          <h3 className="text-3xl font-semibold">What I’m Doing Now*</h3>
+          <h3 className="text-3xl font-semibold">What I’m Doing Now</h3>
         </div>
         <p className="my-4">
-          Currently, I’m a Lead Product Manager at CoLearn, an edtech platform focused on the Indonesian market. I’ve been driving engagement and retention for our users, achieving a 60% first-month retention and 80% subsequent monthly retention for CoLearn's live classes, a monthly payable product. Additionally, I’ve mentored promising team members across business teams, enabling their upward movement into Product roles by crafting and delivering targeted training programs. My journey has been rewarding, and I’m excited about the challenges and opportunities that lie ahead.
+          Currently, I’m a Lead Product Manager at CoLearn, an edtech platform focused on the Indonesian market. I’ve been driving engagement and retention for our users, achieving a 60% first-month retention and 80% subsequent monthly retention for CoLearn's live classes, a monthly payable product. Additionally, I've been mentoring promising team members across business teams, enabling their upward movement into Product roles by crafting and delivering targeted training programs. 
           </p>
+          <p className="my-4">
+          My journey has been rewarding, and I’m excited about the challenges and opportunities that lie ahead. ✨ </p>
       </section>
     </div>
   );
