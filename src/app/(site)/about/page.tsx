@@ -47,30 +47,30 @@ const About = () => {
           (and What They Mean to Me)
           </span>
         </div>
-        <div className="flex max-w-md flex-col before:bg-accent sm:relative sm:before:absolute sm:before:left-[-35px] sm:before:top-2 sm:before:z-[1] sm:before:h-4 sm:before:w-4 sm:before:rounded-full">
+        <div className="flex max-w-md flex-col before:bg-accent sm:relative sm:before:absolute sm:before:left-[-35px] sm:before:top-2 sm:before:z-[1] sm:before:h-4 sm:before:w-4 sm:before:rounded-full"> </div>
           <h3 className="text-xl font-semibold tracking-wide">Integrity</h3>
         
           <p className="my-3">
           I believe in being true to my principles, ensuring that every product I work on is built with the user’s best interest at heart. ❤️
           </p>
-        <div className="flex max-w-md flex-col before:bg-accent sm:relative sm:before:absolute sm:before:left-[-35px] sm:before:top-2 sm:before:z-[1] sm:before:h-4 sm:before:w-4 sm:before:rounded-full">
+        <div className="flex max-w-md flex-col before:bg-accent sm:relative sm:before:absolute sm:before:left-[-35px] sm:before:top-2 sm:before:z-[1] sm:before:h-4 sm:before:w-4 sm:before:rounded-full"> </div>
           <h3 className="text-xl font-semibold tracking-wide">Growth</h3>
         
           <p className="my-3">
           Continuous learning and development are my driving forces, both personally and professionally. I’m always seeking new challenges and opportunities to grow. 🌱          </p>
-        <div className="flex max-w-md flex-col before:bg-accent sm:relative sm:before:absolute sm:before:left-[-35px] sm:before:top-2 sm:before:z-[1] sm:before:h-4 sm:before:w-4 sm:before:rounded-full">
+        <div className="flex max-w-md flex-col before:bg-accent sm:relative sm:before:absolute sm:before:left-[-35px] sm:before:top-2 sm:before:z-[1] sm:before:h-4 sm:before:w-4 sm:before:rounded-full"> </div>
           <h3 className="text-xl font-semibold tracking-wide">Empathy</h3>
         
           <p className="my-3">
           Understanding the user’s pain points is at the core of my approach. I put myself in their shoes to build solutions that truly make a difference. 💡
           </p>
-        <div className="flex max-w-md flex-col before:bg-accent sm:relative sm:before:absolute sm:before:left-[-35px] sm:before:top-2 sm:before:z-[1] sm:before:h-4 sm:before:w-4 sm:before:rounded-full">
+        <div className="flex max-w-md flex-col before:bg-accent sm:relative sm:before:absolute sm:before:left-[-35px] sm:before:top-2 sm:before:z-[1] sm:before:h-4 sm:before:w-4 sm:before:rounded-full"> </div>
           <h3 className="text-xl font-semibold tracking-wide">Efficiency</h3>
         
           <p className="my-3">
           I believe in not reinventing the wheel. My approach is to first explore existing solutions and optimize them before creating something entirely new. 🚀         
           </p>
-          <div className="flex max-w-md flex-col before:bg-accent sm:relative sm:before:absolute sm:before:left-[-35px] sm:before:top-2 sm:before:z-[1] sm:before:h-4 sm:before:w-4 sm:before:rounded-full">
+          <div className="flex max-w-md flex-col before:bg-accent sm:relative sm:before:absolute sm:before:left-[-35px] sm:before:top-2 sm:before:z-[1] sm:before:h-4 sm:before:w-4 sm:before:rounded-full"> </div>
           <h3 className="text-xl font-semibold tracking-wide">Collaboration</h3>
         
           <p className="my-3">
