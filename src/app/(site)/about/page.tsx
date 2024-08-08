@@ -8,8 +8,7 @@ const About = () => {
       </h1>
       <div className="flex flex-col-reverse md:flex-row-reverse  md:gap-20">
         <div className="max-w-lg text-pretty text-base leading-relaxed md:text-lg">
-          <p>
-          **Here’s What You Need to Know** </p>
+        <h3 className="text-xl font-semibold tracking-wide"> Hey there, This is What You Need to Know</h3>
           <p className="my-4">
           I’m Rashi Srivastava, a product manager with a knack for turning chaos into clarity. With nearly 7 years of experience in the product space, I’ve guided products from 0 to 1, always driven by data, experimentation, and an obsession with solving user problems. 🚀
           </p>
@@ -39,7 +38,8 @@ const About = () => {
         </figure>
       </div>
 
-      {/* Timeline */}
+      
+      {/* work values */}
       <section className="my-14">
         <div className="mb-10 text-center md:text-left">
           <h3 className="text-3xl font-semibold">My Work Values</h3>
@@ -76,9 +76,17 @@ const About = () => {
           <p className="my-3">
           Great products are built by great teams. I thrive in collaborative environments where diverse ideas come together to create something amazing. 🤝
           </p>
-          
+      </section>
 
-                </section>
+      {/* What i am doing now */}
+     <section className="my-14">
+        <div className="mb-10 text-center md:text-left">
+          <h3 className="text-3xl font-semibold">What I’m Doing Now*</h3>
+        </div>
+        <p className="my-4">
+          Currently, I’m a Lead Product Manager at CoLearn, an edtech platform focused on the Indonesian market. I’ve been driving engagement and retention for our users, achieving a 60% first-month retention and 80% subsequent monthly retention for CoLearn's live classes, a monthly payable product. Additionally, I’ve mentored promising team members across business teams, enabling their upward movement into Product roles by crafting and delivering targeted training programs. My journey has been rewarding, and I’m excited about the challenges and opportunities that lie ahead.
+          </p>
+      </section>
     </div>
   );
 };
