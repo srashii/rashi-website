@@ -8,9 +8,9 @@ const About = () => {
       </h1>
       <div className="flex flex-col-reverse md:flex-row-reverse  md:gap-20">
         <div className="max-w-lg text-pretty text-base leading-relaxed md:text-lg">
-        <h3 className="text-xl font-semibold tracking-wide"> Hey there, This is What You Need to Know</h3>
+        <h3 className="text-xl font-semibold tracking-wide"> 👋 Hey there, Here is What You Need to Know</h3>
           <p className="my-4">
-          I’m Rashi Srivastava, a product manager with a knack for turning chaos into clarity. With nearly 7 years of experience in the product space, I’ve guided products from 0 to 1, always driven by data, experimentation, and an obsession with solving user problems. 🚀
+          I’m Rashi Srivastava, a product manager with a knack for turning chaos into clarity. With nearly 7 years of experience in the product space, I’ve guided products from 0 to 1, always driven by data, experimentation, and an obsession with solving user problems. 
           </p>
           <p className="my-4">The joy and satisfaction of making an impact, coupled with my enjoyment of untangling the chaos and complexity that every problem brings, keeps me motivated. (And yes, as a Game of Thrones fan, I do believe "Chaos is a ladder 🪜 "—thanks, Littlefinger!)
           </p>
@@ -42,33 +42,33 @@ const About = () => {
           </span>
         </div>
         <div className="flex max-w-md flex-col before:bg-accent sm:relative sm:before:absolute sm:before:left-[-35px] sm:before:top-2 sm:before:z-[1] sm:before:h-4 sm:before:w-4 sm:before:rounded-full"> </div>
-          <h3 className="text-xl font-semibold tracking-wide">Integrity</h3>
+          <h3 className="text-xl font-semibold tracking-wide">Integrity ❤️ </h3>
         
           <p className="my-3">
-          I believe in being true to my principles, ensuring that every product I work on is built with the user’s best interest at heart. ❤️
+          I believe in being true to my principles, ensuring that every product I work on is built with the user’s best interest at heart. 
           </p>
         <div className="flex max-w-md flex-col before:bg-accent sm:relative sm:before:absolute sm:before:left-[-35px] sm:before:top-2 sm:before:z-[1] sm:before:h-4 sm:before:w-4 sm:before:rounded-full"> </div>
-          <h3 className="text-xl font-semibold tracking-wide">Growth</h3>
+          <h3 className="text-xl font-semibold tracking-wide">Growth 🌱</h3>
         
           <p className="my-3">
-          Continuous learning and development are my driving forces, both personally and professionally. I’m always seeking new challenges and opportunities to grow. 🌱          </p>
+          Continuous learning and development are my driving forces, both personally and professionally. I’m always seeking new challenges and opportunities to grow.           </p>
         <div className="flex max-w-md flex-col before:bg-accent sm:relative sm:before:absolute sm:before:left-[-35px] sm:before:top-2 sm:before:z-[1] sm:before:h-4 sm:before:w-4 sm:before:rounded-full"> </div>
-          <h3 className="text-xl font-semibold tracking-wide">Empathy</h3>
+          <h3 className="text-xl font-semibold tracking-wide">Empathy 💡</h3>
         
           <p className="my-3">
-          Understanding the user’s pain points is at the core of my approach. I put myself in their shoes to build solutions that truly make a difference. 💡
+          Understanding the user’s pain points is at the core of my approach. I put myself in their shoes to build solutions that truly make a difference. 
           </p>
         <div className="flex max-w-md flex-col before:bg-accent sm:relative sm:before:absolute sm:before:left-[-35px] sm:before:top-2 sm:before:z-[1] sm:before:h-4 sm:before:w-4 sm:before:rounded-full"> </div>
-          <h3 className="text-xl font-semibold tracking-wide">Efficiency</h3>
+          <h3 className="text-xl font-semibold tracking-wide">Efficiency 🚀</h3>
         
           <p className="my-3">
           I believe in not reinventing the wheel. My approach is to first explore existing solutions and optimize them before creating something entirely new. 🚀         
           </p>
           <div className="flex max-w-md flex-col before:bg-accent sm:relative sm:before:absolute sm:before:left-[-35px] sm:before:top-2 sm:before:z-[1] sm:before:h-4 sm:before:w-4 sm:before:rounded-full"> </div>
-          <h3 className="text-xl font-semibold tracking-wide">Collaboration</h3>
+          <h3 className="text-xl font-semibold tracking-wide">Collaboration 🤝</h3>
         
           <p className="my-3">
-          Great products are built by great teams. I thrive in collaborative environments where diverse ideas come together to create something amazing. 🤝
+          Great products are built by great teams. I thrive in collaborative environments where diverse ideas come together to create something amazing. 
           </p>
       </section>
 
@@ -83,6 +83,18 @@ const About = () => {
           <p className="my-4">
           My journey has been rewarding, and I’m excited about the challenges and opportunities that lie ahead. ✨ </p>
       </section>
+
+      {/* Get in Touch */}
+     <section className="my-14">
+        <div className="mb-10 text-center md:text-left">
+          <h3 className="text-3xl font-semibold">Get in Touch</h3>
+        </div>
+        <p className="my-4">
+        Send me email: srashi[dot]product[at]gmail[dot]com. This is the quickest way to reach me
+          </p>
+       </section>
+
+
     </div>
   );
 };
