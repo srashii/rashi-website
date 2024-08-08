@@ -9,30 +9,23 @@ const About = () => {
       <div className="flex flex-col-reverse md:flex-row-reverse  md:gap-20">
         <div className="max-w-lg text-pretty text-base leading-relaxed md:text-lg">
           <p>
-            Hey, I am Rashi Srivastava, have almost 7 years of experience in
-            Product space, I bring the expertise in building the products from
-            scratch and guiding the same through 0 to 1 journey with a strong
-            metric & experiment driven approach.
+          **Here’s What You Need to Know** </p>
+          <p className="my-4">
+          I’m Rashi Srivastava, a product manager with a knack for turning chaos into clarity. With nearly 7 years of experience in the product space, I’ve guided products from 0 to 1, always driven by data, experimentation, and an obsession with solving user problems. 🚀
+          </p>
+          <p className="my-4">The joy and satisfaction of making an impact, coupled with my enjoyment of untangling the chaos and complexity that every problem brings, keeps me motivated. (And yes, as a Game of Thrones fan, I do believe "Chaos is a ladder 🪜 "—thanks, Littlefinger!)
           </p>
           <p className="my-4">
-            I actually started my career as a Business Analyst and got into
-            product role accidentally, but after I got in I realised I love
-            working on user problems. The happiness & excitement which you gain
-            when you see that something you worked on is actually being used by
-            people and it’s actually solving a pain point they had, it just
-            feels great, Plus I really enjoy kind of enjoy dealing and solving
-            the chaos and complexity which every problem statement brings in.
-            (Chaos is a ladder, these words by Littlefinger seem so true - for
-            Game of Thrones fan only)
+          I have multi-industry experience in Insurtech, Fintech, and Edtech, which helps me bring fresh perspectives and look at things from a diverse angle. 🌍
           </p>
           <p className="my-4">
-            Right now I am in CoLearn, which is an edtech platform focused on
-            Indonesian market, got promoted to Lead Product Manager 1 year back,
-            as the Lead PM, I have owned the product strategy & development for
-            the entire product where I played a pivotal role in orchestrating
-            the expansion of live classes from 1000 to over 5000 paid
-            subscribers within just six months. I am looking forward to gain
-            more learning experiences and grow further in product.
+          When I’m not working, you’ll find me lost in a good book 📚, cycling through new trails 🚴🏼‍♀️, planning my next travel adventure ✈️, or savoring a delicious meal 🥘. I believe that just like product management, life is about exploration, learning, and finding joy in every moment.
+          </p>
+          <p className="my-4">
+            **What I’m Doing Now** 
+          </p>
+          <p>
+          Currently, I’m a Lead Product Manager at CoLearn, an edtech platform focused on the Indonesian market. I’ve been driving engagement and retention for our users, achieving a 60% first-month retention and 80% subsequent monthly retention for CoLearn's live classes, a monthly payable product. Additionally, I’ve mentored promising team members across business teams, enabling their upward movement into Product roles by crafting and delivering targeted training programs. My journey has been rewarding, and I’m excited about the challenges and opportunities that lie ahead.
           </p>
         </div>
 
@@ -49,99 +42,43 @@ const About = () => {
       {/* Timeline */}
       <section className="my-14">
         <div className="mb-10 text-center md:text-left">
-          <h3 className="text-3xl font-semibold">Work </h3>
+          <h3 className="text-3xl font-semibold">My Work Values</h3>
           <span className="text-sm font-bold uppercase tracking-wider text-gray-400">
-            Things I did over the years
+          (and What They Mean to Me)
           </span>
         </div>
         <div className="flex max-w-md flex-col before:bg-accent sm:relative sm:before:absolute sm:before:left-[-35px] sm:before:top-2 sm:before:z-[1] sm:before:h-4 sm:before:w-4 sm:before:rounded-full">
-          <h3 className="text-xl font-semibold tracking-wide">Colearn</h3>
-          <time className="text-xs uppercase tracking-wide text-gray-400">
-            2021 - Present
-          </time>
+          <h3 className="text-xl font-semibold tracking-wide">Integrity</h3>
+        
           <p className="my-3">
-          Achieved 60% first-month retention and 80% subsequent monthly retention 
-          for CoLearn's live classes subscription product
+          I believe in being true to my principles, ensuring that every product I work on is built with the user’s best interest at heart. ❤️
           </p>
-          <p className="my-3">
-            Attained a remarkable 97% reduction in onboarding time by
-            streamlining and automating the entire end-to-end process
-          </p>
-          <p className="my-3">
-            Slashed weekly support time by 60% via strategic implementation of
-            crucial customer support data infrastructure and in-app support
-          </p>
-          <p className="my-3">
-            Boosted paid user engagement by 12% by experimentation with a range
-            of in-class and post-class activities
-          </p>
-          <p className="my-3">
-            Mentored promising team members across business teams & enabled
-            their upward movement in Product by crafting different training
-            programs
-          </p>
-        </div>
         <div className="flex max-w-md flex-col before:bg-accent sm:relative sm:before:absolute sm:before:left-[-35px] sm:before:top-2 sm:before:z-[1] sm:before:h-4 sm:before:w-4 sm:before:rounded-full">
-          <h3 className="text-xl font-semibold tracking-wide">INDmoney</h3>
-          <time className="text-xs uppercase tracking-wide text-gray-400">
-            2020 - 2021
-          </time>
+          <h3 className="text-xl font-semibold tracking-wide">Growth</h3>
+        
           <p className="my-3">
-            Developed the Loan Against Investments product vertical from
-            inception
-          </p>
-          <p className="my-3">
-            Designed numerous marketing campaign experiments, conducting weekly
-            A/B tests that resulted in a 40% surge in acquired leads
-          </p>
-          <p className="my-3">
-            Enhanced bank loan approval rates by 7% through the implementation
-            of technology-driven and process-led adjustments
-          </p>
-          <p className="my-3">
-            Boosted paid user engagement by 12% by experimentation with a range
-            of in-class and post-class activities
-          </p>
-          <p className="my-3">
-            Mentored promising team members across business teams & enabled
-            their upward movement in Product by crafting different training
-            programs
-          </p>
-        </div>
+          Continuous learning and development are my driving forces, both personally and professionally. I’m always seeking new challenges and opportunities to grow. 🌱          </p>
         <div className="flex max-w-md flex-col before:bg-accent sm:relative sm:before:absolute sm:before:left-[-35px] sm:before:top-2 sm:before:z-[1] sm:before:h-4 sm:before:w-4 sm:before:rounded-full">
-          <h3 className="text-xl font-semibold tracking-wide">Ziploan</h3>
-          <time className="text-xs uppercase tracking-wide text-gray-400">
-            2019 - 2020
-          </time>
+          <h3 className="text-xl font-semibold tracking-wide">Empathy</h3>
+        
           <p className="my-3">
-            Increased application punches by ~23% via automation of Direct
-            Selling Agents (DSA) Payout process as it helped improve DSA
-            relations
+          Understanding the user’s pain points is at the core of my approach. I put myself in their shoes to build solutions that truly make a difference. 💡
           </p>
-          <p className="my-3">
-            Reduced delinquency instances by 4% by designing an Early Warning
-            Signal system
-          </p>
-          <p className="my-3">
-            Reduced credit approval rate by 3% by building a Credit Deviations &
-            Approval's Risk Assessment model
-          </p>
-        </div>
         <div className="flex max-w-md flex-col before:bg-accent sm:relative sm:before:absolute sm:before:left-[-35px] sm:before:top-2 sm:before:z-[1] sm:before:h-4 sm:before:w-4 sm:before:rounded-full">
-          <h3 className="text-xl font-semibold tracking-wide">JSimple</h3>
-          <time className="text-xs uppercase tracking-wide text-gray-400">
-            2017-2020
-          </time>
+          <h3 className="text-xl font-semibold tracking-wide">Efficiency</h3>
+        
           <p className="my-3">
-            Enhanced quarterly sales by 18% via the implementation of an
-            insurance recommendation feature
+          I believe in not reinventing the wheel. My approach is to first explore existing solutions and optimize them before creating something entirely new. 🚀         
           </p>
+          <div className="flex max-w-md flex-col before:bg-accent sm:relative sm:before:absolute sm:before:left-[-35px] sm:before:top-2 sm:before:z-[1] sm:before:h-4 sm:before:w-4 sm:before:rounded-full">
+          <h3 className="text-xl font-semibold tracking-wide">Collaboration</h3>
+        
           <p className="my-3">
-            Automated invoice generation, reducing manual effort by 60%, by
-            developing a billing tool for employers and insurance providers
+          Great products are built by great teams. I thrive in collaborative environments where diverse ideas come together to create something amazing. 🤝
           </p>
-        </div>
-      </section>
+          
+
+                </section>
     </div>
   );
 };
