@@ -90,7 +90,7 @@ const About = () => {
           <h3 className="text-3xl font-semibold">Get in Touch</h3>
         </div>
         <p className="my-4">
-        Send me email: srashi[dot]product[at]gmail[dot]com. This is the quickest way to reach me
+        Send me email: **[srashi\[dot\]product\[at\]gmail\[dot\]com](mailto:srashi.product@gmail.com)**. This is the quickest way to reach me
           </p>
        </section>
 
