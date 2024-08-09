@@ -12,7 +12,7 @@ export const siteConfig = {
     linkedIn: "https://www.linkedin.com/in/srashi",
     instagram: "https://www.instagram.com/srashi_12",
     email: "mailto:srashi.product@gmail.com",
-    x: "https://x.com/RashiSr65685500"
+    x: "https://x.com/srashi_product"
   },
   experience: [
     {
