@@ -1,9 +1,9 @@
 import { Skills } from "@/icons/skills";
 import {
-  ArrowDown01,
-  Paintbrush,
-  Presentation,
-  ScatterChart,
+  Eye,
+  Shuffle,
+  Lightbulb,
+  Sun,
 } from "lucide-react";
 
 export const BuildingProducts = () => {
@@ -15,9 +15,8 @@ export const BuildingProducts = () => {
             Building products for humans
           </h2>
           <p className="my-4 md:text-xl lg:my-10">
-            With my startup background, I bring a lean mindset for building
-            products fast. My previous experiences helps me in building products
-            that understand and enhance user experiences
+          With my startup background, I bring a lean and agile approach to building products quickly and efficiently. I’m passionate about <b>understanding users</b> and <b>driven by data</b>, always aiming for <b>clear and open communication.</b> </p>
+          <p className="my-4 md:text-xl lg:my-10">My diverse experiences across different industries help me craft products that genuinely improve user experiences. Here are the key strengths I've honed through my varied journey:
           </p>
         </div>
 
@@ -27,42 +26,38 @@ export const BuildingProducts = () => {
       </div>
       <ul className="my-10  md:grid md:grid-cols-2 md:gap-x-4">
         <li className="my-4 flex items-center lg:my-10">
-          <Presentation size={48} strokeWidth={0.5} />
+          <Eye size={48} strokeWidth={0.5} />
           <div className="ml-5">
-            <h3 className="text-md font-bold lg:text-lg">Product Strategy</h3>
+            <h3 className="text-md font-bold lg:text-lg">Clarity in Ambiguity</h3>
             <p className="text-sm lg:text-base">
-              Roadmapping, A/B Tests, Project Management
-            </p>
+            Navigate complex or vague problems with ease, bringing clarity where there’s uncertainty            </p>
           </div>
         </li>
         <li className="my-4 flex items-center">
-          <Paintbrush size={48} strokeWidth={0.5} />
+          <Shuffle size={48} strokeWidth={0.5} />
           <div className="ml-5">
-            <h3 className="text-md font-bold lg:text-lg">Product Design</h3>
+            <h3 className="text-md font-bold lg:text-lg">Adaptability</h3>
             <p className="text-sm lg:text-base">
-              User Stories, User Flows, Wireframes, Personas
-            </p>
+            Seamlessly adjust strategies to thrive in dynamic environments and evolving needs            </p>
           </div>
         </li>
 
         <li className="my-4 flex items-center">
-          <ArrowDown01 size={48} strokeWidth={0.5} />
+          <Lightbulb size={48} strokeWidth={0.5} />
           <div className="ml-5">
             <h3 className="text-md font-bold lg:text-lg">
-              Market & User Research
-            </h3>
+            Unique & Fresh Perspective </h3>
             <p className="text-sm lg:text-base">
-              Market Analysis, Experiment Design,Usability Testing
+            Leverage my multi-industry background (Fintech, Insurtech, Edtech) to bring innovative viewpoints to problem-solving            
             </p>
           </div>
         </li>
         <li className="my-4 flex items-center">
-          <ScatterChart size={48} strokeWidth={0.5} />
+          <Sun size={48} strokeWidth={0.5} />
           <div className="ml-5">
-            <h3 className="text-md font-bold lg:text-lg">Analytics</h3>
+            <h3 className="text-md font-bold lg:text-lg">Positive Energy</h3>
             <p className="text-sm lg:text-base">
-              Data driven decisions, user metrics, patterns & trends
-            </p>
+            Infuse the team with optimism and motivation, turning challenges into opportunities            </p>
           </div>
         </li>
       </ul>

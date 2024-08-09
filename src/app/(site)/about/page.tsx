@@ -62,7 +62,7 @@ const About = () => {
           <h3 className="text-xl font-semibold tracking-wide">Efficiency 🚀</h3>
         
           <p className="my-3">
-          I believe in not reinventing the wheel. My approach is to first explore existing solutions and optimize them before creating something entirely new. 🚀         
+          I believe in not reinventing the wheel. My approach is to first explore existing solutions and optimize them before creating something entirely new.         
           </p>
           <div className="flex max-w-md flex-col before:bg-accent sm:relative sm:before:absolute sm:before:left-[-35px] sm:before:top-2 sm:before:z-[1] sm:before:h-4 sm:before:w-4 sm:before:rounded-full"> </div>
           <h3 className="text-xl font-semibold tracking-wide">Collaboration 🤝</h3>
@@ -83,16 +83,6 @@ const About = () => {
           <p className="my-4">
           My journey has been rewarding, and I’m excited about the challenges and opportunities that lie ahead. ✨ </p>
       </section>
-
-      {/* Get in Touch */}
-     <section className="my-14">
-        <div className="mb-10 text-center md:text-left">
-          <h3 className="text-3xl font-semibold">Get in Touch</h3>
-        </div>
-        <p className="my-4">
-        Send me email: <u>srashi[dot]product[at]gmail[dot]com</u>. This is the quickest way to reach me
-          </p>
-       </section>
 
 
     </div>
