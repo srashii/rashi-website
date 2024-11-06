@@ -1,4 +1,11 @@
-import { BadgeCheckIcon, NotebookPen, PaintBucket, Pen, Pencil, User } from "lucide-react";
+import {
+  BadgeCheckIcon,
+  NotebookPen,
+  PaintBucket,
+  Pen,
+  Pencil,
+  User,
+} from "lucide-react";
 import { ThemeToggle } from "./theme-toggle";
 import { siteConfig } from "@/site.config";
 
@@ -15,21 +22,21 @@ const Header = () => {
           className="fill-green-600 stroke-white dark:stroke-slate-800"
         />
       </a>
-      <div className="ml-auto flex gap-4 md:gap-5">
-      <a
+      <div className="ml-auto flex  md:gap-5">
+        <a
           href="/blog"
-          className="flex items-end justify-end gap-2 rounded-lg p-2 transition-colors lg:hover:bg-accent lg:hover:text-white"
+          className="flex items-center justify-end gap-2 whitespace-nowrap rounded-lg p-2 transition-colors lg:hover:bg-accent lg:hover:text-white"
         >
-          <NotebookPen size={20} />
-          <span className="text-sm">My Product Journal</span>
+          <NotebookPen size={16} />
+          <span className="text-xs md:text-base">My Product Journal</span>
         </a>
 
         <a
           href="/about"
-          className="flex items-end justify-end gap-2 rounded-lg p-2 transition-colors lg:hover:bg-accent lg:hover:text-white"
+          className="flex  items-center justify-end gap-1 rounded-lg p-2 transition-colors  md:gap-2 lg:hover:bg-accent lg:hover:text-white"
         >
-          <User size={20} />
-          <span className="text-sm">About</span>
+          <User size={16} />
+          <span className="text-xs md:text-base">About</span>
         </a>
 
         <ThemeToggle />

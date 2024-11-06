@@ -20,29 +20,31 @@ export default function Blog() {
       <ul className="my-4 min-h-screen">
         {articles.map((article) => (
           <li
-            className="group relative my-10 flex w-full transform items-center justify-between rounded-lg border p-4 shadow-md transition-transform hover:scale-105 hover:shadow-lg"
+            className="md: md: group relative my-10 flex w-full transform  flex-col justify-between  gap-6 rounded-lg border p-4 p-6 shadow-md transition-transform hover:scale-105 hover:shadow-lg md:flex-row md:items-center"
             key={article._id}
           >
             <Link
               href={`/blog/${article.slugAsParams}`}
-              className="my-4 items-center gap-4 md:my-5  md:flex md:py-3"
+              className="items-center gap-4 md:my-5  md:flex md:py-3"
             >
               <div>
-                <h3 className="my-2 text-xl font-bold">{article.title}</h3>
+                <h3 className="text-ld my-lg font-bold md:text-xl">
+                  {article.title}
+                </h3>
                 <time
                   dateTime={article.date}
                   className="mb-4 block text-xs text-gray-600"
                 >
                   {format(parseISO(article.date), "LLLL d, yyyy")}
                 </time>
-                <p className="line-clamp-2 text-lg">{article.description}</p>
+                <p className="line-clamp-2 text-base">{article.description}</p>
               </div>
             </Link>
             <a
               href={`/blog/${article.slugAsParams}`}
-              className="ml-12 mr-4 flex min-w-[150px] items-center justify-center gap-2 rounded-lg p-2 transition-colors lg:bg-accent lg:text-white"
+              className="mt-4 w-fit gap-2 rounded-lg bg-accent px-4 py-2 text-white transition-colors"
             >
-              <p className="text-base">Read more</p>
+              <p className="whitespace-nowrap text-base">Read more</p>
             </a>
           </li>
         ))}
