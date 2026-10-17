@@ -4,10 +4,11 @@ interface DesignGalleryProps {
   url?: string;
   images?: string[];
   video?: string;
+  poster?: string;
   title: string;
 }
 
-export const DesignGallery = ({ url, images, video, title }: DesignGalleryProps) => {
+export const DesignGallery = ({ url, images, video, poster, title }: DesignGalleryProps) => {
   if (!images?.length && !video) {
     return (
       <div className="flex h-64 flex-col items-center justify-center gap-3 rounded-lg border-2 border-dashed border-slate-300 p-6 text-center text-slate-500 dark:border-slate-500 dark:text-slate-300">
@@ -26,6 +27,7 @@ export const DesignGallery = ({ url, images, video, title }: DesignGalleryProps)
         {video && (
           <video
             src={video}
+            poster={poster}
             controls
             muted
             playsInline

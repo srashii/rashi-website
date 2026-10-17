@@ -3,15 +3,17 @@ import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 
 export const PortfolioCard = ({ project }: { project: Project }) => {
+  const thumbnail = project.images?.[0] ?? project.poster;
+
   return (
     <Link
       href={`/portfolio/${project.slugAsParams}`}
       className="group flex h-full flex-col rounded-lg border p-6 shadow-md transition-transform hover:scale-[1.02] hover:shadow-lg dark:border-slate-500"
     >
-      {project.images?.[0] && (
+      {thumbnail && (
         // eslint-disable-next-line @next/next/no-img-element
         <img
-          src={project.images[0]}
+          src={thumbnail}
           alt=""
           loading="lazy"
           className="mb-5 h-48 w-full rounded-md bg-[#f1eefe] object-contain"

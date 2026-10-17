@@ -72,6 +72,7 @@ export default async function ProjectPage({ params }: ProjectProps) {
             url={project.figma}
             images={project.images}
             video={project.video}
+            poster={project.poster}
             title={project.title}
           />
         </div>

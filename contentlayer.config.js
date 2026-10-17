@@ -82,6 +82,9 @@ export const Project = defineDocumentType(() => ({
     video: {
       type: "string",
     },
+    poster: {
+      type: "string",
+    },
     order: {
       type: "number",
       required: true,
