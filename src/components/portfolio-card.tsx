@@ -1,10 +1,10 @@
 import { Project } from "contentlayer/generated";
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
-import { isVideo, posterFor } from "./design-gallery";
+import { firstMedia, isVideo, posterFor } from "./design-gallery";
 
 export const PortfolioCard = ({ project }: { project: Project }) => {
-  const cover = project.media?.[0];
+  const cover = project.media?.[0] && firstMedia(project.media[0]);
   const thumbnail = cover && (isVideo(cover) ? posterFor(cover) : cover);
 
   return (
