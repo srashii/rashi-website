@@ -1,83 +1,75 @@
 import Image from "next/image";
-import { InstagramIcon, LinkedinIcon, MailboxIcon, X } from "lucide-react";
+import { Download, LinkedinIcon, Mail } from "lucide-react";
 import { siteConfig } from "@/site.config";
 
 const Intro = () => {
-  const desc = siteConfig.description.split("/n");
+  const { hero } = siteConfig;
   return (
-    <section className="mb-24 flex flex-col-reverse items-end justify-between px-5 md:flex-row xl:px-0">
-      <div>
-        <h1 className="relative z-10 -mt-16 max-w-lg  text-right font-serif text-7xl leading-none text-accent [text-shadow:_0_1px_0_rgb(0_0_0_/_40%)] md:py-5 md:pt-[50px]   md:text-left md:text-[150px]">
-          <span className="block before:absolute before:right-0 before:-z-10 before:h-1/2 before:w-[10rem]  before:bg-white dark:before:bg-slate-800">
-            {siteConfig.firstName}
-          </span>
-          <span className="block">{siteConfig.lastName}</span>
-        </h1>
-        <div className="mt-10 max-w-lg px-5 xl:px-0 xl:pe-10">
-          {desc.map((d, idx) => (
-            <p className="mb-5  text-lg md:text-xl" key={idx}>
-              {d}
-            </p>
-          ))}
-
-          <ul className="mt-10 grid list-none  grid-cols-2 gap-4 p-0">
-            <li>
-              <a
-                className="text-md flex items-center gap-2 leading-none"
-                href={siteConfig.socialLinks.linkedIn}
-              >
-                <span>
-                  <LinkedinIcon />
-                </span>
-                <span>LinkedIn</span>
-              </a>
-            </li>
-            <li>
-              <a
-                className="text-md flex items-center gap-2 leading-none"
-                href={siteConfig.socialLinks.instagram}
-              >
-                <span>
-                  <InstagramIcon />
-                </span>
-                <span>Instagram</span>
-              </a>
-            </li>
-            <li>
-              <a
-                className="text-md flex items-center gap-2 leading-none"
-                href={siteConfig.socialLinks.x}
-              >
-                <span>
-                  <X />
-                </span>
-                <span>X.com</span>
-              </a>
-            </li>
-            <li>
-              <a
-                className="text-md flex items-center gap-2 leading-none"
-                href={siteConfig.socialLinks.email}
-              >
-                <span>
-                  <MailboxIcon />
-                </span>
-                <span>Email</span>
-              </a>
-            </li>
-          </ul>
+    <section className="mb-24 px-5 pt-6 xl:px-0">
+      <div className="flex items-center gap-5">
+        {hero.photo && (
+          <div className="relative h-20 w-20 shrink-0 overflow-hidden rounded-full md:h-28 md:w-28">
+            <Image
+              src={hero.photo}
+              alt={siteConfig.siteTitle}
+              fill
+              priority
+              style={{ objectFit: "cover" }}
+              sizes="112px"
+            />
+          </div>
+        )}
+        <div>
+          <h1 className="text-3xl font-bold md:text-5xl">
+            {siteConfig.siteTitle}
+          </h1>
+          <p className="text-lg text-slate-600 dark:text-slate-300">
+            {hero.role}
+          </p>
         </div>
       </div>
 
-      <figure className="relative m-0 h-[400px] w-full lg:h-[800px]">
-        <Image
-          src="/assets/profile_aug_2024.png"
-          alt={`${siteConfig.firstName} Profile picture`}
-          fill
-          style={{ objectFit: "cover" }}
-          sizes="(max-width: 768px) 50vw, 100vw"
-        />
-      </figure>
+      <p className="mt-8 max-w-4xl text-3xl font-bold leading-tight md:text-5xl">
+        {hero.headline} <span className="text-accent">{hero.headlineAccent}</span>
+      </p>
+      <p className="mt-6 max-w-3xl text-base text-slate-600 md:text-lg dark:text-slate-300">
+        {hero.summary}
+      </p>
+
+      <h2 className="mt-10 text-sm font-bold uppercase tracking-wide text-accent">
+        {hero.highlightsTitle}
+      </h2>
+      <ul className="mt-3 grid list-none gap-3 p-0 md:grid-cols-3 md:gap-4">
+        {hero.proof.map((p) => (
+          <li key={p.figure} className="rounded-2xl bg-[#f1eefe] p-4 dark:bg-slate-700 md:p-5">
+            <p className="whitespace-nowrap text-2xl font-bold tabular-nums text-accent md:text-4xl">
+              {p.figure}
+            </p>
+            <p className="mt-1 text-sm text-slate-700 dark:text-slate-200 md:mt-2 md:text-base">{p.label}</p>
+          </li>
+        ))}
+      </ul>
+
+      <div className="mt-8 flex flex-wrap gap-3">
+        <a
+          href={hero.cv}
+          className="inline-flex items-center gap-2 rounded-full border-2 border-accent bg-accent px-6 py-3 font-semibold text-white transition-colors hover:bg-transparent hover:text-accent"
+        >
+          <Download size={18} /> Download CV
+        </a>
+        <a
+          href={siteConfig.socialLinks.email}
+          className="inline-flex items-center gap-2 rounded-full border-2 border-accent px-6 py-3 font-semibold text-accent transition-colors hover:bg-accent hover:text-white"
+        >
+          <Mail size={18} /> Email me
+        </a>
+        <a
+          href={siteConfig.socialLinks.linkedIn}
+          className="inline-flex items-center gap-2 rounded-full border-2 border-slate-300 px-6 py-3 font-semibold text-slate-700 transition-colors hover:border-accent hover:text-accent dark:text-slate-200"
+        >
+          <LinkedinIcon size={18} /> LinkedIn
+        </a>
+      </div>
     </section>
   );
 };

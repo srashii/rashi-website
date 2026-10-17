@@ -76,6 +76,10 @@ export const Project = defineDocumentType(() => ({
       type: "list",
       of: { type: "string" },
     },
+    // Headline result shown in bold on the portfolio card.
+    result: {
+      type: "string",
+    },
     // Card thumbnail; defaults to the first media item.
     cover: {
       type: "string",
