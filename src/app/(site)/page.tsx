@@ -1,8 +1,6 @@
-import { BuildingProducts } from "@/components/building-products";
 import { ContactSection } from "@/components/contact-section";
 import { Intro } from "@/components/intro";
 import { PortfolioSection } from "@/components/portfolio-section";
-import { ThoughtsOnProducts } from "@/components/thoughts-on-building";
 import { WorkSection } from "@/components/work-section";
 
 export default async function Home() {
@@ -12,10 +10,6 @@ export default async function Home() {
       <div className="m-auto h-12 w-12 rounded-full bg-accent hover:animate-ping" />
       <PortfolioSection />
       <div className="m-auto h-12 w-12 rounded-full bg-accent hover:animate-ping" />
-      <ThoughtsOnProducts />
-      <div className="m-auto h-12 w-12 rounded-full bg-accent hover:animate-ping" />
-      <BuildingProducts />
-      <div className="m-auto h-12 w-12 rounded-full bg-accent hover:animate-ping" />  
       <WorkSection />
       <ContactSection />
     </>
