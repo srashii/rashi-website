@@ -20,8 +20,8 @@ export const siteConfig = {
       timePeriod: "2024 - Present",
       description: `
       - Hired for Growth & Cross-Sell; scope grew to lending at six months and to the Chats and Homepage squads at one year\n
-      - More than doubled the share of monthly active users who transact on fintech in one year, through splash screens, homepage recommendations and in-call and in-chat nudges\n
-      - Grew chat messages sent per user per day by ~29% in six months with voice notes, chat themes, transaction cards and personalised celebrations\n
+      - Grew monthly fintech transacting users from 3.5% to 8% of monthly active users in one year, through splash screens, homepage recommendations and in-call and in-chat nudges\n
+      - Grew chat messages sent per user per day from 18.5 to 23.8 in six months with voice notes, chat themes, transaction cards and personalised celebrations\n
       - Built Botim's Trust & Safety framework from scratch across Chat and Call, cutting spam-caller complaints to support by 65%\n
       - Lifted EasyCash lending utilisation by 68% by integrating Boost rewards into lending\n
       - Cut campaign setup from hours to under 3 minutes with an in-house Segment Builder and in-app campaign engine\n
