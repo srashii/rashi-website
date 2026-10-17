@@ -1,10 +1,9 @@
-
 export const siteConfig = {
   siteTitle: 'Rashi Srivastava',
   firstName: 'Rashi',
   lastName: 'Srivastava',
   description: `👋 Hi, I'm Rashi Srivastava!/n
-  A versatile product manager with almost 7 years of experience in building products from scratch and scaling them from 0 to 1 by focusing on Growth & Retention./n I thrive on bringing order to chaos and solve complex user or business problems. This blog is my Product Journal where I share my experiences, insights, and both real-world and imaginative product case studies.`,
+  A product manager with 8+ years of experience across Fintech and EdTech, building products from 0 to 1 and scaling them through growth, engagement and cross-sell./n Today I lead the Chat, Growth & Cross-Sell and Homepage squads at Botim, the UAE's calling and fintech super-app, turning everyday conversations into financial moments. I thrive on bringing order to chaos, and this site is where I share my product portfolio and journal.`,
   header: {
     logoName: 'Rashi'
   },
@@ -16,25 +15,51 @@ export const siteConfig = {
   },
   experience: [
     {
-      companyName: "Colearn",
-      role: "Lead Product Manager",
-      timePeriod: "2021 - Present",
+      companyName: "AstraTech (Botim)",
+      role: "Product Manager · Chat, Growth & Cross-Sell, Homepage",
+      timePeriod: "2024 - Present",
       description: `
-      - Achieved 60% first-month retention and 80% subsequent monthly retention for CoLearn's live classes subscription product\n
-      - Attained a remarkable 97% reduction in onboarding time by streamlining and automating the entire end-to-end process\n
-      - Slashed weekly support time by 60% via strategic implementation of crucial customer support data infrastructure and in-app support\n
-      - Boosted paid user engagement by 12% by experimentation with a range of in-class and post-class activities\n
-      - Mentored promising team members across business teams & enabled their upward movement in Product by crafting different training programs`
+      - Hired for Growth & Cross-Sell; scope grew to lending at six months and to the Chats and Homepage squads at one year\n
+      - Grew monthly fintech transacting users from 3.5% to 8% of monthly active users in one year, through splash screens, homepage recommendations and in-call and in-chat nudges\n
+      - Grew chat messages sent per user per day from 18.5 to 23.8 in six months with voice notes, chat themes, transaction cards and personalised celebrations\n
+      - Built Botim's Trust & Safety framework from scratch across Chat and Call, cutting spam-caller complaints to support by 65%\n
+      - Lifted EasyCash lending utilisation by 68% by integrating Boost rewards into lending\n
+      - Cut campaign setup from hours to under 3 minutes with an in-house Segment Builder and in-app campaign engine\n
+      - Led the Amplitude rollout across 12 squads so every team can see its user journeys`
     },
     {
-      companyName: "IND Money",
-      role: "Associate Product Manager",
+      companyName: "CoLearn",
+      role: "Lead Product Manager",
+      timePeriod: "2021 - 2024",
+      description: `
+      - Grew Tanya, the photo-to-solution homework engine, to millions of students every month\n
+      - Amplified trial subscriptions 5X in three months through iterative A/B tests on the trial-to-paid funnel\n
+      - Achieved 90% semester renewal by raising class attendance from 58% to 90%+ for most students\n
+      - Reduced onboarding time by 97% and weekly support time by 60% through automation and an in-app chatbot\n
+      - Mentored team members across product and business, crafting training programmes for their growth`
+    },
+    {
+      companyName: "INDmoney",
+      role: "Product Manager",
       timePeriod: "2020 - 2021",
       description: `
-      - Developed the Loan Against Investments product vertical from inception\n
-      - Designed numerous marketing campaign experiments, conducting weekly A/B tests that resulted in a 40% surge in acquired leads\n
-      - Enhanced bank loan approval rates by 7% through the implementation of technology-driven and process-led adjustments`
+      - Built the Loan Against Investments vertical from scratch\n
+      - Drove a 40% surge in acquired leads through weekly A/B-tested campaigns`
+    },
+    {
+      companyName: "Ziploan",
+      role: "Associate Product Manager",
+      timePeriod: "2019 - 2020",
+      description: `
+      - Increased loan applications by ~23% by automating the agent payout process\n
+      - Built the repayments and collections system, including a collector app and early-warning signals`
+    },
+    {
+      companyName: "Jsimple (Verko)",
+      role: "Business Analyst",
+      timePeriod: "2017 - 2019",
+      description: `
+      - Built automated billing for a B2B insurance SaaS used by Fortune 500 companies, cutting manual effort by 60%`
     }
   ]
 }
-

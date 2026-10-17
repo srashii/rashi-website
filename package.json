@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "author": "Ravigopal Kesari <hello@ravigopal.com>",
+  "engines": {
+    "node": "24.x"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",

@@ -1,0 +1,28 @@
+---
+title: Turning conversations into transactions
+company: Botim
+period: 2025 - Present
+problem: People open Botim to talk, not to pay. How do we move users from a chat into a money moment without breaking the conversation?
+tags: ["Fintech", "Chat", "Cross-sell"]
+figma: "https://www.figma.com/design/et6htQz2KFV8PwA5qf4dGD/Astra-Projects?node-id=0-1"
+media: ["EasyCash Bill Reminder and Bill Overdue in the chat list :: /assets/portfolio/chat-to-fintech.png", "Send money in chat, P2P push vs international transfer push :: /assets/portfolio/send-money-chat.png|/assets/portfolio/p2p-vs-international.mp4"]
+order: 1
+---
+
+## The problem
+
+Botim is used every day for calls and chats, but only a small share of those users ever touch its fintech services. Payments lived behind separate tabs, so the moments where money naturally comes up in a conversation (a birthday, a shared dinner, sending money home) were lost.
+
+## How I approached it
+
+- **Found the money moments in chat.** I mapped where users already talk about money and prioritised the ones with the highest intent: gifting, splitting a bill, collecting money for a group and sending money home.
+- **Made the entry point part of the conversation.** A Dirham-icon tooltip, a pulsating payment call to action and contextual celebrations (birthday and congratulations animations that nudge a gift) put payments one tap away, inside the chat.
+- **Brought money reminders into the chat list.** EasyCash repayments now show up as a Bill Reminder, and turn into a red Bill Overdue alert, right on the chat list, so users see what they owe where they spend their day.
+- **Built one framework instead of many screens.** I designed a single transaction message-card framework that works for P2P, AANI, gifts and remittances, so every new transfer type ships as a configuration, not a rebuild.
+- **Measured causally.** Every change ran as a controlled experiment with clean control groups, measured on incremental transacting users rather than raw clicks.
+
+## Outcome
+
+- **57K+ new users converted to fintech in a quarter** through the chat money moments.
+- **3% uplift in EasyCash lending repayments** after Bill Reminder and Bill Overdue alerts moved into the chat list, with 7% of users opening those messages.
+- The card framework is now the shared base for new transfer types across squads.

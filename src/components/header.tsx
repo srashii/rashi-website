@@ -1,5 +1,6 @@
 import {
   BadgeCheckIcon,
+  BriefcaseBusiness,
   NotebookPen,
   PaintBucket,
   Pen,
@@ -24,11 +25,19 @@ const Header = () => {
       </a>
       <div className="ml-auto flex  md:gap-5">
         <a
+          href="/portfolio"
+          className="flex items-center justify-end gap-2 whitespace-nowrap rounded-lg p-2 transition-colors lg:hover:bg-accent lg:hover:text-white"
+        >
+          <BriefcaseBusiness size={16} />
+          <span className="text-xs md:text-base">Portfolio</span>
+        </a>
+        <a
           href="/blog"
           className="flex items-center justify-end gap-2 whitespace-nowrap rounded-lg p-2 transition-colors lg:hover:bg-accent lg:hover:text-white"
         >
           <NotebookPen size={16} />
-          <span className="text-xs md:text-base">My Product Journal</span>
+          <span className="text-xs md:hidden">Journal</span>
+          <span className="hidden md:inline md:text-base">My Product Journal</span>
         </a>
 
         <a
