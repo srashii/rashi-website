@@ -2,7 +2,7 @@
   "name": "rashi-website",
   "version": "0.1.0",
   "private": true,
-  "author": "Ravigopal Kesari <hello@ravigopal.com>",
+  "author": "Rashi Srivastava",
   "engines": {
     "node": "24.x"
   },

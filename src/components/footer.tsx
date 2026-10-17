@@ -4,7 +4,7 @@ import { InstagramIcon, LinkedinIcon, MailboxIcon, X } from "lucide-react";
 const Footer = () => {
   return (
     <footer>
-      <p className="relative text-center font-serif text-5xl font-bold text-accent after:absolute after:-bottom-[3px] after:left-0 after:h-5 after:w-full after:bg-white dark:after:bg-slate-800">
+      <p className="text-center font-serif text-5xl font-bold text-accent">
         {siteConfig.firstName} {siteConfig.lastName}
       </p>
       <nav className="my-2">

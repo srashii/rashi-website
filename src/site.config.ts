@@ -2,8 +2,33 @@ export const siteConfig = {
   siteTitle: 'Rashi Srivastava',
   firstName: 'Rashi',
   lastName: 'Srivastava',
-  description: `👋 Hi, I'm Rashi Srivastava!/n
-  A product manager with 8+ years of experience across Fintech and EdTech, building products from 0 to 1 and scaling them through growth, engagement and cross-sell./n Today I lead the Chat, Growth & Cross-Sell and Homepage squads at Botim, the UAE's calling and fintech super-app, turning everyday conversations into financial moments. I thrive on bringing order to chaos, and this site is where I share my product portfolio and journal.`,
+  description:
+    "Product manager with 8+ years across fintech and edtech. I lead the Chat, Growth & Cross-Sell and Homepage squads at Botim, the UAE's super-app.",
+  hero: {
+    // Round photo next to the name; set to "" to hide it.
+    photo: "/assets/rashi-photo.jpg" as string,
+    role: "Product Manager · Botim (AstraTech)",
+    headline: "I turn everyday conversations into",
+    headlineAccent: "financial moments.",
+    summary:
+      "8+ years across fintech and edtech, building 0→1 and scaling to millions of users. Today I lead the Chat, Growth & Cross-Sell and Homepage squads at Botim, the UAE's calling and fintech super-app.",
+    cv: "/assets/RashiSrivastava-Resume.pdf",
+    highlightsTitle: "Highlights from my current role",
+    proof: [
+      {
+        figure: "3.5% to 8%",
+        label: "of monthly active users transacting on fintech, in one year",
+      },
+      {
+        figure: "65%",
+        label: "reduction in spam-caller complaints to support, from 3.7 to 1.3 per day",
+      },
+      {
+        figure: "18.5 to 23.8",
+        label: "chat messages sent per user per day, in six months",
+      },
+    ],
+  },
   header: {
     logoName: 'Rashi'
   },

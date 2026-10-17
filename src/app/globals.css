@@ -37,3 +37,7 @@
     src: url(/fonts/gallery-modern.woff2) format('woff2');
   }
 }
+/* The brand purple is too dark to read on the dark background; lighten it for text only. */
+:where(.dark) .text-accent {
+  color: #b9a6fd;
+}

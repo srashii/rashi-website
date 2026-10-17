@@ -1,5 +1,4 @@
 import {
-  BadgeCheckIcon,
   BriefcaseBusiness,
   NotebookPen,
   PaintBucket,
@@ -17,11 +16,7 @@ const Header = () => {
         className="text-md flex items-center gap-1 font-bold uppercase text-accent transition-all md:hover:scale-125"
         href="/"
       >
-        {siteConfig.header.logoName}{" "}
-        <BadgeCheckIcon
-          size={18}
-          className="fill-green-600 stroke-white dark:stroke-slate-800"
-        />
+        {siteConfig.header.logoName}
       </a>
       <div className="ml-auto flex  md:gap-5">
         <a
