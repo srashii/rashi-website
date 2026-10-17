@@ -75,6 +75,10 @@ export const Project = defineDocumentType(() => ({
     figma: {
       type: "string",
     },
+    images: {
+      type: "list",
+      of: { type: "string" },
+    },
     order: {
       type: "number",
       required: true,

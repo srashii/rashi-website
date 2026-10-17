@@ -3,7 +3,7 @@ import { allProjects } from "contentlayer/generated";
 
 import { Metadata } from "next";
 import { Mdx } from "@/components/mdx-components";
-import { FigmaEmbed } from "@/components/figma-embed";
+import { DesignGallery } from "@/components/design-gallery";
 import { ArrowLeft } from "lucide-react";
 
 interface ProjectProps {
@@ -68,7 +68,11 @@ export default async function ProjectPage({ params }: ProjectProps) {
           <h2>Design</h2>
         </div>
         <div className="mt-5">
-          <FigmaEmbed url={project.figma} title={project.title} />
+          <DesignGallery
+            url={project.figma}
+            images={project.images}
+            title={project.title}
+          />
         </div>
       </article>
     </>

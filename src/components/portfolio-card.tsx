@@ -8,6 +8,15 @@ export const PortfolioCard = ({ project }: { project: Project }) => {
       href={`/portfolio/${project.slugAsParams}`}
       className="group flex h-full flex-col rounded-lg border p-6 shadow-md transition-transform hover:scale-[1.02] hover:shadow-lg dark:border-slate-500"
     >
+      {project.images?.[0] && (
+        // eslint-disable-next-line @next/next/no-img-element
+        <img
+          src={project.images[0]}
+          alt=""
+          loading="lazy"
+          className="mb-5 h-48 w-full rounded-md bg-[#f1eefe] object-contain"
+        />
+      )}
       <p className="text-sm font-bold uppercase tracking-wide text-accent">
         {project.company}
         {project.period && (
