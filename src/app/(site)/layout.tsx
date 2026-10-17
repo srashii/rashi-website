@@ -9,11 +9,20 @@ import { ThemeProvider } from "@/components/theme-provider";
 const montserratFont = Montserrat({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.srashi.com"),
   title: {
-    template: `%s  | ${siteConfig.siteTitle}`,
-    default: siteConfig.siteTitle,
+    template: `%s | ${siteConfig.siteTitle}`,
+    default: `${siteConfig.siteTitle} | Product Manager`,
   },
   description: siteConfig.description,
+  openGraph: {
+    type: "website",
+    siteName: siteConfig.siteTitle,
+    title: `${siteConfig.siteTitle} | Product Manager`,
+    description: siteConfig.description,
+    images: [{ url: "/og-image.png", width: 1200, height: 630 }],
+  },
+  twitter: { card: "summary_large_image" },
 };
 
 export default function RootLayout({
@@ -24,7 +33,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={montserratFont.className}>
-        <ThemeProvider attribute="class">
+        <ThemeProvider attribute="class" defaultTheme="light">
           <main className="mx-auto min-h-screen max-w-screen-lg">
             <Header />
             {children}

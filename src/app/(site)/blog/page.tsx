@@ -1,6 +1,12 @@
 import { allPosts } from "contentlayer/generated";
 import { compareDesc, format, parseISO } from "date-fns";
 import Link from "next/link";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "My Product Journal",
+  description: "Notes on product management, discovery and building products.",
+};
 
 export default function Blog() {
   const articles = allPosts.sort((a, b) =>

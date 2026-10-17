@@ -1,4 +1,5 @@
 import { Figma } from "lucide-react";
+import { TapVideo } from "./tap-video";
 
 interface DesignGalleryProps {
   media?: string[];
@@ -18,15 +19,7 @@ const MediaItem = ({ src: raw, title, className }: { src: string; title: string;
   const full = raw.endsWith("#full");
   const src = raw.replace(/#full$/, "");
   return isVideo(src) ? (
-    <video
-      src={src}
-      poster={posterFor(src)}
-      controls
-      muted
-      playsInline
-      preload="metadata"
-      className={`${className} max-w-full rounded-lg`}
-    />
+    <TapVideo src={src} poster={posterFor(src)} className={className} />
   ) : (
     // eslint-disable-next-line @next/next/no-img-element
     <img src={src} alt={`${title} design`} loading="lazy" className={`${full ? "w-[260px]" : className} max-w-full rounded-lg`} />

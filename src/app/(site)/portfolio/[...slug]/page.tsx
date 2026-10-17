@@ -3,7 +3,7 @@ import { allProjects } from "contentlayer/generated";
 
 import { Metadata } from "next";
 import { Mdx } from "@/components/mdx-components";
-import { DesignGallery } from "@/components/design-gallery";
+import { DesignGallery, firstMedia, isVideo, posterFor } from "@/components/design-gallery";
 import { ArrowLeft } from "lucide-react";
 
 interface ProjectProps {
@@ -26,9 +26,17 @@ export async function generateMetadata({
     return {};
   }
 
+  const cover = project.cover ?? (project.media?.[0] && firstMedia(project.media[0]));
+  const image = cover && (isVideo(cover) ? posterFor(cover) : cover);
+
   return {
     title: project.title,
     description: project.problem,
+    openGraph: {
+      title: project.title,
+      description: project.problem,
+      ...(image && { images: [image] }),
+    },
   };
 }
 

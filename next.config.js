@@ -9,6 +9,7 @@ const nextConfig = {
     return [
       { source: "/portfolio/chat-delight", destination: "/portfolio/chat-to-fintech", permanent: true },
       { source: "/portfolio/realtime-homepage", destination: "/portfolio", permanent: true },
+      { source: "/assets/RashiSrivastavaResume-public.pdf", destination: "/assets/RashiSrivastava-Resume.pdf", permanent: true },
     ];
   },
   images: {
