@@ -10,7 +10,7 @@ const About = () => {
         <div className="max-w-lg text-pretty text-base leading-relaxed md:text-lg">
         <h3 className="text-xl font-semibold tracking-wide"> 👋 Hey there, Here is What You Need to Know</h3>
           <p className="my-4">
-          I’m Rashi Srivastava, a product manager with a knack for turning chaos into clarity. With nearly 7 years of experience in the product space, I’ve guided products from 0 to 1, always driven by data, experimentation, and an obsession with solving user problems. 
+          I’m Rashi Srivastava, a product manager with a knack for turning chaos into clarity. With 8+ years of experience in the product space, I’ve guided products from 0 to 1 and scaled them across Fintech and EdTech, always driven by data, experimentation, and an obsession with solving user problems. 
           </p>
           <p className="my-4">The joy and satisfaction of making an impact, coupled with my enjoyment of untangling the chaos and complexity that every problem brings, keeps me motivated. (And yes, as a Game of Thrones fan, I do believe "Chaos is a ladder 🪜 "—thanks, Littlefinger!)
           </p>
@@ -78,7 +78,7 @@ const About = () => {
           <h3 className="text-3xl font-semibold">What I’m Doing Now</h3>
         </div>
         <p className="my-4">
-          Currently, I’m a Lead Product Manager at CoLearn, an edtech platform focused on the Indonesian market. I’ve been driving engagement and retention for our users, achieving a 60% first-month retention and 80% subsequent monthly retention for CoLearn's live classes, a monthly payable product. Additionally, I've been mentoring promising team members across business teams, enabling their upward movement into Product roles by crafting and delivering targeted training programs. 
+          Currently, I’m a Product Manager at AstraTech, leading the Chat, Growth & Cross-Sell and Homepage squads for Botim, the UAE’s calling and fintech super-app. My focus is turning everyday conversations into financial moments: helping people discover and use payments, transfers, rewards and lending right where they already talk. Along the way I built Botim’s Trust & Safety framework from scratch and the growth tooling that lets the team run experiments at scale.
           </p>
           <p className="my-4">
           My journey has been rewarding, and I’m excited about the challenges and opportunities that lie ahead. ✨ </p>

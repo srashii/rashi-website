@@ -48,7 +48,42 @@ export const Post = defineDocumentType(() => ({
   computedFields,
 }));
 
+export const Project = defineDocumentType(() => ({
+  name: "Project",
+  filePathPattern: `portfolio/**/*.mdx`,
+  contentType: "mdx",
+  fields: {
+    title: {
+      type: "string",
+      required: true,
+    },
+    company: {
+      type: "string",
+      required: true,
+    },
+    period: {
+      type: "string",
+    },
+    problem: {
+      type: "string",
+      required: true,
+    },
+    tags: {
+      type: "list",
+      of: { type: "string" },
+    },
+    figma: {
+      type: "string",
+    },
+    order: {
+      type: "number",
+      required: true,
+    },
+  },
+  computedFields,
+}));
+
 export default makeSource({
   contentDirPath: "./content",
-  documentTypes: [Post, Page],
+  documentTypes: [Post, Page, Project],
 });
