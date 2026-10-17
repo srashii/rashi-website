@@ -56,7 +56,6 @@ export default async function ProjectPage({ params }: ProjectProps) {
       <article className="mb-32 px-5 xl:px-0">
         <p className="text-sm font-bold uppercase tracking-wide text-accent">
           {project.company}
-          {project.period && ` · ${project.period}`}
         </p>
         <h1 className="my-4 font-serif text-5xl  font-bold text-accent md:text-8xl">
           {project.title}
