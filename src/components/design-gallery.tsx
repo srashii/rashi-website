@@ -11,10 +11,13 @@ export const isVideo = (src: string) => src.endsWith(".mp4");
 export const posterFor = (src: string) => src.replace(/\.mp4$/, ".jpg");
 
 // "a|b" in media renders a and b side by side; "Caption :: a" adds a caption above.
-export const firstMedia = (entry: string) => entry.split("::").pop()!.trim().split("|")[0];
+// A "#full" suffix shows a full-length scrolling screen at a fixed width instead of capping its height.
+export const firstMedia = (entry: string) => entry.split("::").pop()!.trim().split("|")[0].replace(/#full$/, "");
 
-const MediaItem = ({ src, title, className }: { src: string; title: string; className: string }) =>
-  isVideo(src) ? (
+const MediaItem = ({ src: raw, title, className }: { src: string; title: string; className: string }) => {
+  const full = raw.endsWith("#full");
+  const src = raw.replace(/#full$/, "");
+  return isVideo(src) ? (
     <video
       src={src}
       poster={posterFor(src)}
@@ -26,8 +29,9 @@ const MediaItem = ({ src, title, className }: { src: string; title: string; clas
     />
   ) : (
     // eslint-disable-next-line @next/next/no-img-element
-    <img src={src} alt={`${title} design`} loading="lazy" className={`${className} max-w-full rounded-lg`} />
+    <img src={src} alt={`${title} design`} loading="lazy" className={`${full ? "w-[260px]" : className} max-w-full rounded-lg`} />
   );
+};
 
 export const DesignGallery = ({ media, title }: DesignGalleryProps) => {
   if (!media?.length) {
