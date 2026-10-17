@@ -10,8 +10,8 @@ export const isVideo = (src: string) => src.endsWith(".mp4");
 // Each video ships with a same-named .jpg cover frame.
 export const posterFor = (src: string) => src.replace(/\.mp4$/, ".jpg");
 
-// "a|b" in media renders a and b side by side.
-export const firstMedia = (entry: string) => entry.split("|")[0];
+// "a|b" in media renders a and b side by side; "Caption :: a" adds a caption above.
+export const firstMedia = (entry: string) => entry.split("::").pop()!.trim().split("|")[0];
 
 const MediaItem = ({ src, title, className }: { src: string; title: string; className: string }) =>
   isVideo(src) ? (
@@ -48,16 +48,24 @@ export const DesignGallery = ({ media, title }: DesignGalleryProps) => {
         Figma snapshots · {title}
       </p>
       <div className="flex flex-col items-start gap-6">
-        {media.map((entry) => {
+        {media.map((raw) => {
+          const [caption, entry] = raw.includes("::") ? raw.split("::").map((part) => part.trim()) : [undefined, raw];
           const group = entry.split("|");
-          return group.length > 1 ? (
-            <div key={entry} className="flex flex-wrap items-start gap-6">
-              {group.map((src) => (
-                <MediaItem key={src} src={src} title={title} className="max-h-[600px]" />
-              ))}
-            </div>
-          ) : (
-            <MediaItem key={entry} src={entry} title={title} className="max-h-[700px]" />
+          return (
+            <figure key={raw} className="m-0 flex flex-col gap-3">
+              {caption && (
+                <figcaption className="text-sm font-semibold text-slate-600 dark:text-slate-300">{caption}</figcaption>
+              )}
+              {group.length > 1 ? (
+                <div className="flex flex-wrap items-start gap-6">
+                  {group.map((src) => (
+                    <MediaItem key={src} src={src} title={title} className="max-h-[600px]" />
+                  ))}
+                </div>
+              ) : (
+                <MediaItem src={entry} title={title} className="max-h-[700px]" />
+              )}
+            </figure>
           );
         })}
       </div>
