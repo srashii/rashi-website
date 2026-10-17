@@ -79,6 +79,9 @@ export const Project = defineDocumentType(() => ({
       type: "list",
       of: { type: "string" },
     },
+    video: {
+      type: "string",
+    },
     order: {
       type: "number",
       required: true,

@@ -71,6 +71,7 @@ export default async function ProjectPage({ params }: ProjectProps) {
           <DesignGallery
             url={project.figma}
             images={project.images}
+            video={project.video}
             title={project.title}
           />
         </div>
