@@ -1,7 +1,6 @@
-import { ArrowUpRight, Figma } from "lucide-react";
+import { Figma } from "lucide-react";
 
 interface DesignGalleryProps {
-  url?: string;
   media?: string[];
   title: string;
 }
@@ -30,7 +29,7 @@ const MediaItem = ({ src, title, className }: { src: string; title: string; clas
     <img src={src} alt={`${title} design`} loading="lazy" className={`${className} max-w-full rounded-lg`} />
   );
 
-export const DesignGallery = ({ url, media, title }: DesignGalleryProps) => {
+export const DesignGallery = ({ media, title }: DesignGalleryProps) => {
   if (!media?.length) {
     return (
       <div className="flex h-64 flex-col items-center justify-center gap-3 rounded-lg border-2 border-dashed border-slate-300 p-6 text-center text-slate-500 dark:border-slate-500 dark:text-slate-300">
@@ -45,6 +44,9 @@ export const DesignGallery = ({ url, media, title }: DesignGalleryProps) => {
 
   return (
     <>
+      <p className="mb-4 text-sm font-bold uppercase tracking-wide text-accent">
+        Figma snapshots · {title}
+      </p>
       <div className="flex flex-col items-start gap-6">
         {media.map((entry) => {
           const group = entry.split("|");
@@ -59,16 +61,6 @@ export const DesignGallery = ({ url, media, title }: DesignGalleryProps) => {
           );
         })}
       </div>
-      {url && (
-        <a
-          href={url}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="mt-4 inline-flex items-center gap-1 text-sm font-bold uppercase text-accent hover:underline"
-        >
-          Open in Figma <ArrowUpRight size={18} />
-        </a>
-      )}
     </>
   );
 };
