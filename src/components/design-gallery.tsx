@@ -2,14 +2,17 @@ import { ArrowUpRight, Figma } from "lucide-react";
 
 interface DesignGalleryProps {
   url?: string;
-  images?: string[];
-  video?: string;
-  poster?: string;
+  media?: string[];
   title: string;
 }
 
-export const DesignGallery = ({ url, images, video, poster, title }: DesignGalleryProps) => {
-  if (!images?.length && !video) {
+export const isVideo = (src: string) => src.endsWith(".mp4");
+
+// Each video ships with a same-named .jpg cover frame.
+export const posterFor = (src: string) => src.replace(/\.mp4$/, ".jpg");
+
+export const DesignGallery = ({ url, media, title }: DesignGalleryProps) => {
+  if (!media?.length) {
     return (
       <div className="flex h-64 flex-col items-center justify-center gap-3 rounded-lg border-2 border-dashed border-slate-300 p-6 text-center text-slate-500 dark:border-slate-500 dark:text-slate-300">
         <Figma size={32} strokeWidth={1} />
@@ -24,26 +27,29 @@ export const DesignGallery = ({ url, images, video, poster, title }: DesignGalle
   return (
     <>
       <div className="flex flex-col items-start gap-6">
-        {video && (
-          <video
-            src={video}
-            poster={poster}
-            controls
-            muted
-            playsInline
-            className="max-h-[700px] max-w-full rounded-lg"
-          />
+        {media.map((src, idx) =>
+          isVideo(src) ? (
+            <video
+              key={src}
+              src={src}
+              poster={posterFor(src)}
+              controls
+              muted
+              playsInline
+              preload="metadata"
+              className="max-h-[700px] max-w-full rounded-lg"
+            />
+          ) : (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img
+              key={src}
+              src={src}
+              alt={`${title} design ${idx + 1}`}
+              loading="lazy"
+              className="max-w-full rounded-lg"
+            />
+          ),
         )}
-        {images?.map((src, idx) => (
-          // eslint-disable-next-line @next/next/no-img-element
-          <img
-            key={src}
-            src={src}
-            alt={`${title} design ${idx + 1}`}
-            loading="lazy"
-            className="max-w-full rounded-lg"
-          />
-        ))}
       </div>
       {url && (
         <a

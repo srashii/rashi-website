@@ -1,29 +1,47 @@
 ---
-title: A growth engine for a super-app
+title: From 3.5% to 8%, growing fintech on a calling app
 company: Botim
 period: 2024 - Present
-problem: Growth needed to run experiments every week, but every campaign took hours to set up and most fintech journeys could not be measured.
-tags: ["Growth", "Lifecycle", "Experimentation"]
+problem: Only 3.5% of Botim's monthly active users made a fintech transaction, and that number had been flat for months even though a large growth team was pushing campaigns.
+tags: ["Growth", "Cross-sell", "Experimentation"]
 figma: "https://www.figma.com/design/et6htQz2KFV8PwA5qf4dGD/Astra-Projects?node-id=0-1"
+media: ["/assets/portfolio/growth-discovery.png", "/assets/portfolio/splash-screen.mp4", "/assets/portfolio/growth-surfaces.png", "/assets/portfolio/call-end-widgets.mp4"]
 order: 4
-video: "/assets/portfolio/call-end-widgets.mp4"
-poster: "/assets/portfolio/call-end-widgets.jpg"
 ---
 
 ## The problem
 
-Botim's fintech services were hard to discover, and the Growth team could not move fast: each campaign took four to five hours of manual setup, and many key user actions were not tracked, so nobody could say which ideas actually worked.
+I joined Botim as Product Manager for Growth & Cross-Sell. Botim was known as a calling app, and only 3.5% of monthly active users made a fintech transaction. More campaigns were not moving that number, so before building anything I looked for why. I found three blockers:
+
+- **Users didn't know Botim had fintech at all.** User research showed this was the biggest problem. People saw Botim as a way to call home, not a place to send money, borrow or buy gold.
+- **Growth had no flexible levers.** The promotion engine worked for one service only, there were no dynamic segments, and every campaign meant hours of setup and a long approval chain.
+- **Nobody could see user journeys.** We knew how many people transacted, but not where they dropped off.
 
 ## How I approached it
 
-- **Measured everything that matters.** I authored the event-tracking specs across 10+ fintech surfaces (checkout, add funds, P2P, withdrawals, onboarding and more) on Amplitude and MoEngage.
-- **Built the tools Growth needed.** I owned an in-house Segment Builder and in-app campaign engine with screen-based triggers, so campaigns fire for the right users on the right screen.
-- **Created discovery surfaces.** Splash screens, homepage recommendations and Smart Tips in call and chat turned high-attention moments into fintech entry points.
-- **Made the end of a call an entry point.** Interactive call-end widgets invite users to pull down and explore a fintech service, like a live exchange rate with a one-tap transfer, at the moment they are most engaged.
-- **Rewarded the first transaction.** I built the Boost rewards system that turns a user's first transfer, gold purchase or loan into a goal worth completing (see the Boost case study).
+**1. Fixed discovery first, by putting money moments where users already were.**
+
+- A dedicated Money tab that explains each service, with a live currency calculator for international transfers.
+- For You and Discover sections on the homepage, showing the services most relevant to each user.
+- Splash screens for campaigns and moments like Akshaya Tritiya gold offers.
+- A "Send money to [country]" button inside the chat composer and an interactive wallet widget on the post-call screen.
+
+Fixing awareness before spending on rewards was the key call: users entering fintech services more than doubled in a month, and grew almost 4X within 6–8 months.
+
+**2. Gave Growth levers they could pull without engineering.**
+
+- **Boost**, a reusable rewards engine (do X, get Y) for cashback, gold and VIP subscriptions, later extended into lending. See the Boost case study.
+- **MoEngage** for segmentation and personalised in-app campaigns. Scaling it wasn't my job, but my goals depended on it, so I worked with DevOps to take campaign infrastructure from 200 to 600 QPS and added a queuing mechanism.
+- **An in-house Segment Builder** after outages with the third-party tool, cutting campaign setup from 4–5 hours to under 3 minutes.
+
+**3. Made data visible across the company.**
+
+It wasn't my KPI, but I led the Amplitude rollout across 12 squads: I got the CTO's sign-off during a re-architecture, ran company-wide training and office hours, and pushed every team to track a "bad funnel" of errors, not just conversions.
 
 ## Outcome
 
 - **Fintech transacting users grew from 3.5% to 8% of monthly active users in one year.**
-- **Campaign setup went from 4–5 hours to under 3 minutes.**
-- Analytics now cover 10+ fintech surfaces end to end.
+- **Users entering fintech services more than doubled in a month**, and grew almost 4X within 6–8 months.
+- **Campaign infrastructure scaled 3X** (200 to 600 QPS), and **campaign setup went from 4–5 hours to under 3 minutes.**
+- **All 12 squads** now make decisions on one analytics platform.
+- My scope grew from Growth & Cross-Sell to lending at six months, and to the Chats and Homepage squads at one year.

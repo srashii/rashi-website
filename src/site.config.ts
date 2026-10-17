@@ -19,20 +19,20 @@ export const siteConfig = {
       role: "Product Manager · Chat, Growth & Cross-Sell, Homepage",
       timePeriod: "2024 - Present",
       description: `
-      - Leading three squads on Botim's calling and fintech super-app, owning strategy, roadmaps, OKRs and delivery\n
+      - Hired for Growth & Cross-Sell; scope grew to lending at six months and to the Chats and Homepage squads at one year\n
       - More than doubled the share of monthly active users who transact on fintech in one year, through splash screens, homepage recommendations and in-call and in-chat nudges\n
       - Grew chat messages sent per user per day by ~29% in six months with voice notes, chat themes, transaction cards and personalised celebrations\n
       - Built Botim's Trust & Safety framework from scratch across Chat and Call, cutting spam-caller complaints to support by 65%\n
       - Lifted EasyCash lending utilisation by 68% by integrating Boost rewards into lending\n
       - Cut campaign setup from hours to under 3 minutes with an in-house Segment Builder and in-app campaign engine\n
-      - Instrumented 10+ fintech surfaces on Amplitude and MoEngage and introduced incremental-impact A/B testing`
+      - Led the Amplitude rollout across 12 squads so every team can see its user journeys`
     },
     {
       companyName: "CoLearn",
       role: "Lead Product Manager",
       timePeriod: "2021 - 2024",
       description: `
-      - Built a photo-to-solution homework engine from scratch, reaching millions of students every month\n
+      - Grew Tanya, the photo-to-solution homework engine, to millions of students every month\n
       - Amplified trial subscriptions 5X in three months through iterative A/B tests on the trial-to-paid funnel\n
       - Achieved 90% semester renewal by raising class attendance from 58% to 90%+ for most students\n
       - Reduced onboarding time by 97% and weekly support time by 60% through automation and an in-app chatbot\n

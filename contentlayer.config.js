@@ -75,15 +75,9 @@ export const Project = defineDocumentType(() => ({
     figma: {
       type: "string",
     },
-    images: {
+    media: {
       type: "list",
       of: { type: "string" },
-    },
-    video: {
-      type: "string",
-    },
-    poster: {
-      type: "string",
     },
     order: {
       type: "number",
