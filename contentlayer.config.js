@@ -76,6 +76,10 @@ export const Project = defineDocumentType(() => ({
       type: "list",
       of: { type: "string" },
     },
+    // Card thumbnail; defaults to the first media item.
+    cover: {
+      type: "string",
+    },
     order: {
       type: "number",
       required: true,

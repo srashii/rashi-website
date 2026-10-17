@@ -4,7 +4,7 @@ import Link from "next/link";
 import { firstMedia, isVideo, posterFor } from "./design-gallery";
 
 export const PortfolioCard = ({ project }: { project: Project }) => {
-  const cover = project.media?.[0] && firstMedia(project.media[0]);
+  const cover = project.cover ?? (project.media?.[0] && firstMedia(project.media[0]));
   const thumbnail = cover && (isVideo(cover) ? posterFor(cover) : cover);
 
   return (
