@@ -61,9 +61,6 @@ export const Project = defineDocumentType(() => ({
       type: "string",
       required: true,
     },
-    period: {
-      type: "string",
-    },
     problem: {
       type: "string",
       required: true,

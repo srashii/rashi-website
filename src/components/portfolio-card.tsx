@@ -23,12 +23,6 @@ export const PortfolioCard = ({ project }: { project: Project }) => {
       )}
       <p className="text-sm font-bold uppercase tracking-wide text-accent">
         {project.company}
-        {project.period && (
-          <span className="font-normal text-slate-500 dark:text-slate-300">
-            {" "}
-            · {project.period}
-          </span>
-        )}
       </p>
       <h3 className="my-3 text-xl font-bold">{project.title}</h3>
       <p className="text-base">{project.problem}</p>
