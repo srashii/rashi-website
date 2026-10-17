@@ -48,12 +48,14 @@ const Footer = () => {
         <p className="my-2">
           © {new Date().getFullYear()} {siteConfig.firstName} {siteConfig.lastName}
         </p>
+        {/* Hidden for now; Rashi will restore this credit later.
         <p className="my-2 ">
           Designed & built by{" "}
           <a className="hover:underline" href="https://ravigopal.com">
             Ravigopal Kesari
           </a>
         </p>
+        */}
       </div>
     </footer>
   );
