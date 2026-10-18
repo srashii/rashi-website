@@ -8,8 +8,8 @@ export const siteConfig = {
     // Round photo next to the name; set to "" to hide it.
     photo: "/assets/rashi-photo.jpg" as string,
     role: "Product Manager · Botim (AstraTech)",
-    headline: "I turn everyday conversations into",
-    headlineAccent: "financial moments.",
+    headline: "I turn messy problems into",
+    headlineAccent: "products people love.",
     summary:
       "8+ years across fintech and edtech, building 0→1 and scaling to millions of users. Today I lead the Chat, Growth & Cross-Sell and Homepage squads at Botim, the UAE's calling and fintech super-app.",
     cv: "/assets/RashiSrivastava-Resume.pdf",
