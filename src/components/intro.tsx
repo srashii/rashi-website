@@ -46,6 +46,11 @@ const Intro = () => {
               {p.figure}
             </p>
             <p className="mt-1 text-sm text-slate-700 dark:text-slate-200 md:mt-2 md:text-base">{p.label}</p>
+            {"revenue" in p && p.revenue && (
+              <p className="mt-3 border-t border-accent/30 pt-3 text-sm font-bold text-slate-900 dark:text-white md:text-base">
+                {p.revenue}
+              </p>
+            )}
           </li>
         ))}
       </ul>

@@ -18,6 +18,7 @@ export const siteConfig = {
       {
         figure: "3.5% to 8%",
         label: "of monthly active users transacting on fintech, in one year",
+        revenue: "AED 948K (~$258K) incremental revenue, in one year",
       },
       {
         figure: "65%",
@@ -26,6 +27,7 @@ export const siteConfig = {
       {
         figure: "18.5 to 23.8",
         label: "chat messages sent per user per day, in six months",
+        revenue: "~$1.2M from chat monetisation, in 6 months",
       },
     ],
   },
