@@ -80,6 +80,15 @@ export const Project = defineDocumentType(() => ({
     result: {
       type: "string",
     },
+    // How the product came about: "0 to 1" (built from nothing) or "Scaled".
+    stage: {
+      type: "enum",
+      options: ["0 to 1", "Scaled"],
+    },
+    // True when Rashi owned the product end to end.
+    endToEnd: {
+      type: "boolean",
+    },
     // Card thumbnail; defaults to the first media item.
     cover: {
       type: "string",

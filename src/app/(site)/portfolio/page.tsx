@@ -1,6 +1,6 @@
 import { allProjects } from "contentlayer/generated";
 import { Metadata } from "next";
-import { PortfolioCard } from "@/components/portfolio-card";
+import { PortfolioFilter } from "@/components/portfolio-filter";
 
 export const metadata: Metadata = {
   title: "Product Portfolio",
@@ -21,13 +21,7 @@ export default function Portfolio() {
         behind them.
       </p>
 
-      <ul className="my-10 grid gap-6 md:grid-cols-2">
-        {projects.map((project) => (
-          <li key={project._id}>
-            <PortfolioCard project={project} />
-          </li>
-        ))}
-      </ul>
+      <PortfolioFilter projects={projects} />
     </div>
   );
 }
