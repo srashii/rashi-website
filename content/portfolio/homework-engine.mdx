@@ -1,33 +1,39 @@
 ---
-title: Snap a question, learn the answer
+title: Tanya, snap a question, learn the answer
 company: CoLearn
-problem: Indonesian students needed help with homework at the moment they were stuck, and CoLearn needed a way to reach them before selling live classes.
-tags: ["EdTech", "AI", "Retention"]
+problem: Students got stuck on homework after school. CoLearn's free homework help lived on WhatsApp, outside the app where it sold live classes.
+tags: ["EdTech", "Growth", "Cross-team"]
 figma: ""
-media: ["Tanya on WhatsApp :: /assets/portfolio/tanya-whatsapp-demo.mp4", "Live class join experience :: /assets/portfolio/join-class-android.png|/assets/portfolio/join-class-ios.png", "Semester report shared with parents :: /assets/portfolio/parent-report.png"]
-result: "Attracted 5M+ MAU with a photo-to-solution homework engine."
+media: ["Tanya on WhatsApp :: /assets/portfolio/tanya-whatsapp-demo.mp4"]
+result: "Tanya grew from 15K users in launch week to ~1.2M MAU by December."
 stage: "0 to 1"
 endToEnd: false
-order: 6
+order: 7
 ---
 
 ## The problem
 
-CoLearn sells live classes to students in grades 4 to 12. Paid acquisition was expensive, and students who did sign up often missed classes and churned before the semester ended.
+When I joined CoLearn in May 2021, Tanya, its free homework help, ran on WhatsApp with ~1.01M users. A student photographed a textbook question and got a video solution back. But it lived outside the app, where CoLearn sold its live classes.
 
 ## How I approached it
 
-- **Used the free tool as the front door.** Tanya, CoLearn's photo-to-solution homework helper, already lived on WhatsApp: students sent a photo of a question and got a video solution back in seconds, without installing anything. I used it as the entry point to bring students into the app, where ML image matching on a proprietary question bank powered the same experience.
-- **Turned free users into learners.** Iterative A/B tests on the trial-to-paid funnel amplified trial subscriptions 5X in three months.
-- **Made showing up rewarding.** Instant-gratification rewards and in-class engagement experiments raised class attendance from 58% to over 90% for most students.
-- **Got new students into their first class.** The Join button didn't appear when students opened the app 15–20 minutes before class, so they got confused, messaged support or missed their first class. I put the next class and its join button on the home screen so new students could join without help.
-- **Kept parents in the loop.** Parents received a semester report with their child's attendance, poll participation and notes from teachers, which helped retention.
-- **Removed friction behind the scenes.** Automated onboarding, an in-app chatbot and a classroom tracking system that powered a teacher performance index.
+I built Tanya in the app from 0 to 1, working across several teams.
+
+- **Moved students into the app.** I capped WhatsApp at 3 questions per 24 hours, after which students needed the app.
+- **Took answer match accuracy from 40% to 85%.** We expanded the question bank to Physics, Chemistry and grades 6–10, and added image-quality checks for blurry and handwritten photos.
+- **Removed dead ends.** An unmatched question led to a similar question, the concept section for that topic, or a trial class on it, which doubled as a path into paid.
+- **Built for real students.** The Coco and Neco characters made solution videos fun, and a small app size kept it working on low-end Android phones.
+
+## The hard call
+
+Tanya grew fast but didn't convert: only ~2% of users booked a trial. I built the case for the C-levels to sunset Tanya in the app and move its videos to YouTube. That kept free discovery without the running cost, and let us focus on referrals and live classes.
 
 ## Outcome
 
-- **Trial subscriptions grew 5X in three months.**
-- **Class attendance rose from 58% to over 90% for 75% of students**, and in-class participation grew 12%.
-- **Semester renewal reached 90%** for paid subscribers.
-- **Onboarding time fell 97% and weekly support time 60%.**
-- The homework engine reached millions of students every month and, with the WhatsApp entry point, became CoLearn's low-cost top of funnel.
+- **15K users in launch week (August) to ~1.2M MAU by December**, and ~5M total users.
+- **Answer match accuracy from 40% to 85%.**
+- ~9.7M video views a month, up to 27.8M in exam months.
+
+## What I learned
+
+I optimised Tanya for MAU, the metric I could move, instead of paid conversion, the one that mattered. Now I set the revenue metric as the north star from day one.
