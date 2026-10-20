@@ -18,16 +18,16 @@ export const siteConfig = {
       {
         figure: "3.5% to 8%",
         label: "of monthly active users transacting on fintech in one year, shared with the Growth team",
-        revenue: "AED 948K (~$258K) incremental revenue, in one year",
+        detail: "AED 948K (~$258K) incremental revenue, in one year",
       },
       {
         figure: "65%",
-        label: "reduction in spam-caller complaints to support, from 3.7 to 1.3 per day",
+        label: "reduction in spam-caller complaints to support, from 3.7 to 1.3 per million calls",
       },
       {
         figure: "18.5 to 23.8",
         label: "chat messages sent per user per day, in six months",
-        revenue: "~$1.2M revenue from chat monetisation, in its first 6 months",
+        detail: "~$1.2M revenue from chat monetisation, in its first 6 months",
       },
     ],
     earlierTitle: "Before Botim, at CoLearn",
@@ -35,11 +35,12 @@ export const siteConfig = {
       {
         figure: "~10K to ~200K",
         label: "paid live-class students per semester, in about two years",
-        revenue: "Roughly $1–2M a month in live-class revenue",
+        detail: "Roughly $1–2M a month in live-class revenue",
       },
       {
         figure: "15K to ~1.2M",
         label: "Tanya users, from launch week to monthly active users by December",
+        detail: "~5M total users",
       },
     ],
   },
