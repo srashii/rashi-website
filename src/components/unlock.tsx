@@ -9,14 +9,16 @@ const OPEN_EVENT = "open-unlock";
 // Only follow same-site paths after unlocking (e.g. back to the CV).
 const safeNext = (value: string | null) => (value && value.startsWith("/") && !value.startsWith("//") ? value : null);
 
-// Any "Enter passcode" button on the page opens the one dialog in the header.
-export const UnlockButton = ({ label = "Enter passcode" }: { label?: string }) => (
+// Every unlock button on the page opens the one dialog in the header.
+export const openUnlock = () => window.dispatchEvent(new Event(OPEN_EVENT));
+
+export const UnlockButton = ({ label = "Enter passcode", small = false }: { label?: string; small?: boolean }) => (
   <button
     type="button"
-    onClick={() => window.dispatchEvent(new Event(OPEN_EVENT))}
-    className="inline-flex items-center gap-2 rounded-full border-2 border-accent bg-accent px-5 py-2 text-sm font-bold text-white transition-colors hover:bg-transparent hover:text-accent"
+    onClick={openUnlock}
+    className={`inline-flex items-center gap-2 rounded-full border-2 border-accent bg-accent font-bold text-white transition-colors hover:bg-transparent hover:text-accent ${small ? "px-3 py-1 text-xs" : "px-5 py-2 text-sm"}`}
   >
-    <Lock size={16} /> {label}
+    <Lock size={small ? 12 : 16} /> {label}
   </button>
 );
 

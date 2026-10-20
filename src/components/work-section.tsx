@@ -1,6 +1,7 @@
 import { siteConfig } from "@/site.config";
 import { isUnlocked } from "@/lib/lock";
 import { redactDeep } from "@/lib/redact";
+import { Redacted } from "./redacted";
 import { ArrowDownToLine } from "lucide-react";
 
 export const WorkSection = async () => {
@@ -20,7 +21,7 @@ export const WorkSection = async () => {
                 <div>
                   {e.description.split("\n").map((desc, id) => (
                     <p className="my-2 text-base" key={`desc-ex-${id}`}>
-                      {desc}
+                      <Redacted text={desc} />
                     </p>
                   ))}
                 </div>

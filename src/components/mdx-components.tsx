@@ -3,13 +3,14 @@ import { Children, ReactNode, createElement } from "react";
 import { useMDXComponent } from "next-contentlayer/hooks";
 import { redactText } from "@/lib/redact";
 import { LockedDesigns } from "./locked-designs";
+import { Redacted } from "./redacted";
 
 const components = {
   Image,
 };
 
 const redactChildren = (children: ReactNode) =>
-  Children.map(children, (child) => (typeof child === "string" ? redactText(child) : child));
+  Children.map(children, (child) => (typeof child === "string" ? <Redacted text={redactText(child)} /> : child));
 
 // Every text-holding tag redacts its own text, so nested ones (a <strong> inside a <p>) are covered too.
 const textTags = ["p", "li", "h1", "h2", "h3", "h4", "h5", "h6", "strong", "em", "a", "td", "th", "blockquote", "code", "span", "del"];

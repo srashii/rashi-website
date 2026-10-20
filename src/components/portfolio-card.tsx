@@ -3,6 +3,7 @@ import { ArrowRight, Lock } from "lucide-react";
 import Link from "next/link";
 import { OwnershipBadges } from "./ownership-badges";
 import { firstMedia, isVideo, posterFor } from "./design-gallery";
+import { Redacted } from "./redacted";
 
 export const PortfolioCard = ({ project }: { project: CardProject }) => {
   const cover = project.cover ?? (project.media?.[0] && firstMedia(project.media[0]));
@@ -32,11 +33,15 @@ export const PortfolioCard = ({ project }: { project: CardProject }) => {
       <p className="mt-3 text-sm font-bold uppercase tracking-wide text-accent">
         {project.company}
       </p>
-      <h3 className="my-3 text-xl font-bold">{project.title}</h3>
-      <p className="text-base">{project.problem}</p>
+      <h3 className="my-3 text-xl font-bold">
+        <Redacted text={project.title} />
+      </h3>
+      <p className="text-base">
+        <Redacted text={project.problem} />
+      </p>
       {project.result && (
         <p className="mt-4 border-l-4 border-accent pl-3 text-base font-bold">
-          {project.result}
+          <Redacted text={project.result} />
         </p>
       )}
       {project.tags && (

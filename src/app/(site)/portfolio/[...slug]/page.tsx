@@ -5,6 +5,8 @@ import { Metadata } from "next";
 import { Mdx } from "@/components/mdx-components";
 import { DesignGallery } from "@/components/design-gallery";
 import { LockedDesigns } from "@/components/locked-designs";
+import { Redacted } from "@/components/redacted";
+import { UnlockButton } from "@/components/unlock";
 import { isUnlocked } from "@/lib/lock";
 import { redactText } from "@/lib/redact";
 import { ArrowLeft } from "lucide-react";
@@ -69,9 +71,17 @@ export default async function ProjectPage({ params }: ProjectProps) {
           {project.company}
         </p>
         <h1 className="my-4 font-serif text-5xl  font-bold text-accent md:text-8xl">
-          {show(project.title)}
+          <Redacted text={show(project.title)} />
         </h1>
-        <p className="text-xl">{show(project.problem)}</p>
+        <p className="text-xl">
+          <Redacted text={show(project.problem)} />
+        </p>
+        {locked && (
+          <div className="mt-6 flex flex-wrap items-center gap-3 rounded-xl bg-[#f1eefe] px-4 py-3 text-sm text-slate-700 dark:bg-slate-700 dark:text-slate-200">
+            Numbers and designs in this case are hidden.
+            <UnlockButton label="Unlock" small />
+          </div>
+        )}
 
         <div className="prose mt-5 dark:prose-invert md:prose-xl">
           <Mdx code={project.body.code} locked={locked} />
