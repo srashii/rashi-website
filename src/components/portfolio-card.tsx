@@ -1,6 +1,7 @@
 import { Project } from "contentlayer/generated";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
+import { OwnershipBadges } from "./ownership-badges";
 import { firstMedia, isVideo, posterFor } from "./design-gallery";
 
 export const PortfolioCard = ({ project }: { project: Project }) => {
@@ -21,7 +22,8 @@ export const PortfolioCard = ({ project }: { project: Project }) => {
           className="mb-5 h-56 w-full rounded-xl bg-[#f1eefe] object-contain transition-transform duration-300 group-hover:scale-[1.03]"
         />
       )}
-      <p className="text-sm font-bold uppercase tracking-wide text-accent">
+      <OwnershipBadges project={project} />
+      <p className="mt-3 text-sm font-bold uppercase tracking-wide text-accent">
         {project.company}
       </p>
       <h3 className="my-3 text-xl font-bold">{project.title}</h3>
