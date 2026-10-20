@@ -50,10 +50,10 @@ const Intro = async () => {
             <h2 className="text-sm font-bold uppercase tracking-wide text-accent">{group.title}</h2>
             {locked && <UnlockButton label="Unlock numbers" small />}
           </div>
-          <ul className="mt-3 grid list-none gap-3 p-0 md:grid-cols-3 md:gap-4">
+          <ul className={`mt-3 grid list-none gap-3 p-0 md:gap-4 ${group.proof.length === 4 ? "md:grid-cols-2 lg:grid-cols-4" : "md:grid-cols-3"}`}>
             {group.proof.map((p, i) => (
               <li key={i} className="rounded-2xl bg-[#f1eefe] p-4 dark:bg-slate-700 md:p-5">
-                <p className="whitespace-nowrap text-2xl font-bold tabular-nums text-accent md:text-4xl">
+                <p className={`whitespace-nowrap text-2xl font-bold tabular-nums text-accent md:text-4xl ${group.proof.length === 4 ? "lg:text-3xl" : ""}`}>
                   <Redacted text={p.figure} />
                 </p>
                 <p className="mt-1 text-sm text-slate-700 dark:text-slate-200 md:mt-2 md:text-base"><Redacted text={p.label} /></p>
