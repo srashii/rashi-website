@@ -23,7 +23,7 @@ export const siteConfig = {
       {
         figure: "65%",
         label: "reduction in spam-caller complaints to support",
-        detail: "From 3.7 to 1.3 complaints per million calls",
+        detail: "From 3.7 to 1.3 complaints per million connected calls",
       },
       {
         figure: "18.5 to 23.8",
@@ -36,7 +36,7 @@ export const siteConfig = {
       {
         figure: "~10K to ~200K",
         label: "paid live-class students per semester, in about two years",
-        detail: "Roughly $1–2M a month in live-class revenue",
+        detail: "About $2M a year in live-class revenue",
       },
       {
         figure: "15K to ~1.2M",
@@ -74,7 +74,7 @@ export const siteConfig = {
       timePeriod: "2021 - 2024",
       description: `
       - Built Tanya, the photo-to-solution homework app, from 0 to 1: 15K users in launch week to ~1.2M MAU by December\n
-      - Grew paid live-class students from ~10K to ~200K per semester in about two years (roughly $1–2M a month in revenue), with referral as the biggest channel\n
+      - Grew paid live-class students from ~10K to ~200K per semester in about two years (about $2M a year in revenue), with referral as the biggest channel\n
       - Reached 75% semester renewal organically with early teacher selection and weekly parent reports\n
       - Reduced onboarding time by 97% and weekly support time by 60% through automation and an in-app chatbot\n
       - Mentored team members across product and business, crafting training programmes for their growth`
