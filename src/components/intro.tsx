@@ -1,9 +1,14 @@
 import Image from "next/image";
 import { Download, LinkedinIcon, Mail } from "lucide-react";
 import { siteConfig } from "@/site.config";
+import { isUnlocked } from "@/lib/lock";
+import { redactDeep } from "@/lib/redact";
+import { Redacted } from "./redacted";
+import { UnlockButton } from "./unlock";
 
-const Intro = () => {
-  const { hero } = siteConfig;
+const Intro = async () => {
+  const locked = !(await isUnlocked());
+  const hero = locked ? redactDeep(siteConfig.hero) : siteConfig.hero;
   return (
     <section className="mb-24 px-5 pt-6 xl:px-0">
       <div className="flex items-center gap-5">
@@ -41,19 +46,20 @@ const Intro = () => {
         { title: hero.earlierTitle, proof: hero.earlierProof },
       ].map((group) => (
         <div key={group.title}>
-          <h2 className="mt-8 text-sm font-bold uppercase tracking-wide text-accent">
-            {group.title}
-          </h2>
+          <div className="mt-8 flex flex-wrap items-center gap-3">
+            <h2 className="text-sm font-bold uppercase tracking-wide text-accent">{group.title}</h2>
+            {locked && <UnlockButton label="Unlock numbers" small />}
+          </div>
           <ul className="mt-3 grid list-none gap-3 p-0 md:grid-cols-3 md:gap-4">
-            {group.proof.map((p) => (
-              <li key={p.figure} className="rounded-2xl bg-[#f1eefe] p-4 dark:bg-slate-700 md:p-5">
+            {group.proof.map((p, i) => (
+              <li key={i} className="rounded-2xl bg-[#f1eefe] p-4 dark:bg-slate-700 md:p-5">
                 <p className="whitespace-nowrap text-2xl font-bold tabular-nums text-accent md:text-4xl">
-                  {p.figure}
+                  <Redacted text={p.figure} />
                 </p>
-                <p className="mt-1 text-sm text-slate-700 dark:text-slate-200 md:mt-2 md:text-base">{p.label}</p>
+                <p className="mt-1 text-sm text-slate-700 dark:text-slate-200 md:mt-2 md:text-base"><Redacted text={p.label} /></p>
                 {"detail" in p && p.detail && (
                   <p className="mt-3 border-t border-accent/30 pt-3 text-sm font-bold text-slate-900 dark:text-white md:text-base">
-                    {p.detail}
+                    <Redacted text={p.detail} />
                   </p>
                 )}
               </li>

@@ -6,10 +6,14 @@ import {
   Pencil,
   User,
 } from "lucide-react";
+import { Suspense } from "react";
 import { ThemeToggle } from "./theme-toggle";
+import { UnlockControl } from "./unlock";
+import { isUnlocked } from "@/lib/lock";
 import { siteConfig } from "@/site.config";
 
-const Header = () => {
+const Header = async () => {
+  const unlocked = await isUnlocked();
   return (
     <header className="sticky top-0 z-50 flex items-center bg-white  px-5 py-5 transition-all dark:bg-slate-800 md:mt-5 xl:px-0">
       <a
@@ -43,6 +47,9 @@ const Header = () => {
           <span className="text-xs md:text-base">About</span>
         </a>
 
+        <Suspense>
+          <UnlockControl unlocked={unlocked} />
+        </Suspense>
         <ThemeToggle />
       </div>
     </header>

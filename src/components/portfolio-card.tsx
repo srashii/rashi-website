@@ -1,10 +1,11 @@
-import { Project } from "contentlayer/generated";
-import { ArrowRight } from "lucide-react";
+import type { CardProject } from "@/lib/projects";
+import { ArrowRight, Lock } from "lucide-react";
 import Link from "next/link";
 import { OwnershipBadges } from "./ownership-badges";
 import { firstMedia, isVideo, posterFor } from "./design-gallery";
+import { Redacted } from "./redacted";
 
-export const PortfolioCard = ({ project }: { project: Project }) => {
+export const PortfolioCard = ({ project }: { project: CardProject }) => {
   const cover = project.cover ?? (project.media?.[0] && firstMedia(project.media[0]));
   const thumbnail = cover && (isVideo(cover) ? posterFor(cover) : cover);
 
@@ -13,6 +14,12 @@ export const PortfolioCard = ({ project }: { project: Project }) => {
       href={`/portfolio/${project.slugAsParams}`}
       className="group flex h-full flex-col rounded-2xl border-2 border-slate-200 p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-accent hover:shadow-xl focus-visible:border-accent focus-visible:outline-none dark:border-slate-500"
     >
+      {project.locked && (
+        <div className="mb-5 flex h-56 w-full flex-col items-center justify-center gap-2 rounded-xl bg-[#f1eefe] text-sm text-slate-600 dark:bg-slate-700 dark:text-slate-300">
+          <Lock size={24} strokeWidth={1.5} />
+          Designs hidden
+        </div>
+      )}
       {thumbnail && (
         // eslint-disable-next-line @next/next/no-img-element
         <img
@@ -26,11 +33,15 @@ export const PortfolioCard = ({ project }: { project: Project }) => {
       <p className="mt-3 text-sm font-bold uppercase tracking-wide text-accent">
         {project.company}
       </p>
-      <h3 className="my-3 text-xl font-bold">{project.title}</h3>
-      <p className="text-base">{project.problem}</p>
+      <h3 className="my-3 text-xl font-bold">
+        <Redacted text={project.title} />
+      </h3>
+      <p className="text-base">
+        <Redacted text={project.problem} />
+      </p>
       {project.result && (
         <p className="mt-4 border-l-4 border-accent pl-3 text-base font-bold">
-          {project.result}
+          <Redacted text={project.result} />
         </p>
       )}
       {project.tags && (

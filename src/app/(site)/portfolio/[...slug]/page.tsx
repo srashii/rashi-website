@@ -3,7 +3,12 @@ import { allProjects } from "contentlayer/generated";
 
 import { Metadata } from "next";
 import { Mdx } from "@/components/mdx-components";
-import { DesignGallery, firstMedia, isVideo, posterFor } from "@/components/design-gallery";
+import { DesignGallery } from "@/components/design-gallery";
+import { LockedDesigns } from "@/components/locked-designs";
+import { Redacted } from "@/components/redacted";
+import { UnlockButton } from "@/components/unlock";
+import { isUnlocked } from "@/lib/lock";
+import { redactText } from "@/lib/redact";
 import { ArrowLeft } from "lucide-react";
 
 interface ProjectProps {
@@ -26,17 +31,14 @@ export async function generateMetadata({
     return {};
   }
 
-  const cover = project.cover ?? (project.media?.[0] && firstMedia(project.media[0]));
-  const image = cover && (isVideo(cover) ? posterFor(cover) : cover);
+  // Link previews are fetched without the passcode, so they get the locked text and the site-wide image.
+  const title = redactText(project.title);
+  const description = redactText(project.problem);
 
   return {
-    title: project.title,
-    description: project.problem,
-    openGraph: {
-      title: project.title,
-      description: project.problem,
-      ...(image && { images: [image] }),
-    },
+    title,
+    description,
+    openGraph: { title, description },
   };
 }
 
@@ -53,6 +55,9 @@ export default async function ProjectPage({ params }: ProjectProps) {
     notFound();
   }
 
+  const locked = !(await isUnlocked());
+  const show = (text: string) => (locked ? redactText(text) : text);
+
   return (
     <>
       <a
@@ -66,19 +71,31 @@ export default async function ProjectPage({ params }: ProjectProps) {
           {project.company}
         </p>
         <h1 className="my-4 font-serif text-5xl  font-bold text-accent md:text-8xl">
-          {project.title}
+          <Redacted text={show(project.title)} />
         </h1>
-        <p className="text-xl">{project.problem}</p>
+        <p className="text-xl">
+          <Redacted text={show(project.problem)} />
+        </p>
+        {locked && (
+          <div className="mt-6 flex flex-wrap items-center gap-3 rounded-xl bg-[#f1eefe] px-4 py-3 text-sm text-slate-700 dark:bg-slate-700 dark:text-slate-200">
+            Numbers and designs in this case are hidden.
+            <UnlockButton label="Unlock" small />
+          </div>
+        )}
 
         <div className="prose mt-5 dark:prose-invert md:prose-xl">
-          <Mdx code={project.body.code} />
+          <Mdx code={project.body.code} locked={locked} />
           <h2>Design</h2>
         </div>
         <div className="mt-5">
-          <DesignGallery
-            media={project.media}
-            title={project.title}
-          />
+          {locked ? (
+            <LockedDesigns />
+          ) : (
+            <DesignGallery
+              media={project.media}
+              title={project.title}
+            />
+          )}
         </div>
       </article>
     </>

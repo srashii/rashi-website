@@ -1,6 +1,6 @@
-import { Project } from "contentlayer/generated";
+import type { CardProject } from "@/lib/projects";
 
-export const OwnershipBadges = ({ project }: { project: Project }) => {
+export const OwnershipBadges = ({ project }: { project: CardProject }) => {
   if (!project.stage && !project.endToEnd) return null;
 
   return (

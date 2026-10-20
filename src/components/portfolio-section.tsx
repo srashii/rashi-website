@@ -1,9 +1,15 @@
 import { allProjects } from "contentlayer/generated";
 import { ArrowUpRight } from "lucide-react";
 import { PortfolioCard } from "./portfolio-card";
+import { isUnlocked } from "@/lib/lock";
+import { toCard } from "@/lib/projects";
 
-export const PortfolioSection = () => {
-  const projects = allProjects.sort((a, b) => a.order - b.order).slice(0, 4);
+export const PortfolioSection = async () => {
+  const locked = !(await isUnlocked());
+  const projects = allProjects
+    .sort((a, b) => a.order - b.order)
+    .slice(0, 4)
+    .map((p) => toCard(p, locked));
 
   return (
     <section className="my-24 px-5 xl:px-0">
