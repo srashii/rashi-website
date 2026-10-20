@@ -21,6 +21,11 @@ export const siteConfig = {
         detail: "AED 948K (~$258K) incremental revenue, in one year",
       },
       {
+        figure: "~$1.2M",
+        label: "revenue from Chat as a Service, in its first 6 months after launch",
+        detail: "Split ~70% verification, ~30% promotional",
+      },
+      {
         figure: "65%",
         label: "reduction in spam-caller complaints to support",
         detail: "From 3.7 to 1.3 complaints per million connected calls",
@@ -28,7 +33,6 @@ export const siteConfig = {
       {
         figure: "18.5 to 23.8",
         label: "chat messages sent per user per day, in six months",
-        detail: "~$1.2M revenue from chat monetisation, in its first 6 months",
       },
     ],
     earlierTitle: "Before Botim, at CoLearn",
@@ -40,7 +44,7 @@ export const siteConfig = {
       },
       {
         figure: "15K to ~1.2M",
-        label: "Tanya users, from launch week to monthly active users by December",
+        label: "Tanya users, from launch week in August 2021 to monthly active users by December 2021",
         detail: "~5M total users",
       },
     ],
@@ -73,7 +77,7 @@ export const siteConfig = {
       role: "Lead Product Manager",
       timePeriod: "2021 - 2024",
       description: `
-      - Built Tanya, the photo-to-solution homework app, from 0 to 1: 15K users in launch week to ~1.2M MAU by December\n
+      - Built Tanya, the photo-to-solution homework app, from 0 to 1: 15K users in launch week (August 2021) to ~1.2M MAU by December 2021\n
       - Grew paid live-class students from ~10K to ~200K per semester in about two years (about $2M a year in revenue), with referral as the biggest channel\n
       - Reached 75% semester renewal organically with early teacher selection and weekly parent reports\n
       - Reduced onboarding time by 97% and weekly support time by 60% through automation and an in-app chatbot\n
