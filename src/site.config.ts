@@ -60,7 +60,7 @@ export const siteConfig = {
       timePeriod: "2021 - 2024",
       description: `
       - Built Tanya, the photo-to-solution homework app, from 0 to 1: 15K users in launch week to ~1.2M MAU by December\n
-      - Grew paid live-class students from ~10K to ~200K per semester in about two years, with referral as the biggest channel\n
+      - Grew paid live-class students from ~10K to ~200K per semester in about two years (roughly $1–2M a month in revenue), with referral as the biggest channel\n
       - Reached 75% semester renewal organically with early teacher selection and weekly parent reports\n
       - Reduced onboarding time by 97% and weekly support time by 60% through automation and an in-app chatbot\n
       - Mentored team members across product and business, crafting training programmes for their growth`
