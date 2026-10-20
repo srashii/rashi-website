@@ -10,8 +10,11 @@ export async function unlockToken(passcode: string) {
 
 // The passcode lives in the SITE_PASSCODE environment variable (set in Vercel), not in this public repo.
 // Without it the site stays locked.
+// Typed values often pick up spaces, a newline or quotes, so those are ignored on both sides.
+export const normalizePasscode = (value: string) => value.trim().replace(/^["']|["']$/g, "").trim();
+
 export async function expectedToken() {
-  const passcode = process.env.SITE_PASSCODE;
+  const passcode = normalizePasscode(process.env.SITE_PASSCODE ?? "");
   return passcode ? unlockToken(passcode) : null;
 }
 

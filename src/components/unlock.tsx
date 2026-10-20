@@ -3,6 +3,7 @@
 import { Lock, LockOpen, X } from "lucide-react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { FormEvent, useEffect, useRef, useState } from "react";
+import { siteConfig } from "@/site.config";
 
 const OPEN_EVENT = "open-unlock";
 
@@ -27,7 +28,7 @@ export const UnlockControl = ({ unlocked }: { unlocked: boolean }) => {
   const params = useSearchParams();
   const [open, setOpen] = useState(false);
   const [passcode, setPasscode] = useState("");
-  const [error, setError] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   const [busy, setBusy] = useState(false);
   const input = useRef<HTMLInputElement>(null);
   const next = safeNext(params.get("unlock"));
@@ -50,17 +51,23 @@ export const UnlockControl = ({ unlocked }: { unlocked: boolean }) => {
   const submit = async (e: FormEvent) => {
     e.preventDefault();
     setBusy(true);
-    setError(false);
-    const ok = await fetch("/api/unlock", {
+    setError(null);
+    const result: { ok: boolean; reason?: string } = await fetch("/api/unlock", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ passcode }),
     })
-      .then((res) => res.ok)
-      .catch(() => false);
+      .then((res) => res.json())
+      .catch(() => ({ ok: false, reason: "network" }));
     setBusy(false);
-    if (!ok) {
-      setError(true);
+    if (!result.ok) {
+      setError(
+        result.reason === "not-configured"
+          ? "Unlocking isn't switched on for this site yet."
+          : result.reason === "network"
+            ? "Couldn't reach the site. Please try again."
+            : "That passcode is incorrect. You can keep browsing without it.",
+      );
       setPasscode("");
       return;
     }
@@ -122,7 +129,7 @@ export const UnlockControl = ({ unlocked }: { unlocked: boolean }) => {
             />
             {error && (
               <p role="alert" className="mt-2 text-sm font-semibold text-red-600 dark:text-red-400">
-                That passcode is incorrect. You can keep browsing without it.
+                {error}
               </p>
             )}
             <button
@@ -132,6 +139,12 @@ export const UnlockControl = ({ unlocked }: { unlocked: boolean }) => {
             >
               {busy ? "Checking…" : "Unlock"}
             </button>
+            <p className="mt-4 text-center text-sm text-slate-600 dark:text-slate-300">
+              Don&apos;t have a passcode?{" "}
+              <a href={siteConfig.socialLinks.email} className="font-semibold text-accent underline">
+                Email me
+              </a>
+            </p>
           </form>
         </div>
       )}
