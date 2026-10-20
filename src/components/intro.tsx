@@ -1,9 +1,11 @@
 import Image from "next/image";
 import { Download, LinkedinIcon, Mail } from "lucide-react";
 import { siteConfig } from "@/site.config";
+import { isUnlocked } from "@/lib/lock";
+import { redactDeep } from "@/lib/redact";
 
-const Intro = () => {
-  const { hero } = siteConfig;
+const Intro = async () => {
+  const hero = (await isUnlocked()) ? siteConfig.hero : redactDeep(siteConfig.hero);
   return (
     <section className="mb-24 px-5 pt-6 xl:px-0">
       <div className="flex items-center gap-5">
@@ -45,8 +47,8 @@ const Intro = () => {
             {group.title}
           </h2>
           <ul className="mt-3 grid list-none gap-3 p-0 md:grid-cols-3 md:gap-4">
-            {group.proof.map((p) => (
-              <li key={p.figure} className="rounded-2xl bg-[#f1eefe] p-4 dark:bg-slate-700 md:p-5">
+            {group.proof.map((p, i) => (
+              <li key={i} className="rounded-2xl bg-[#f1eefe] p-4 dark:bg-slate-700 md:p-5">
                 <p className="whitespace-nowrap text-2xl font-bold tabular-nums text-accent md:text-4xl">
                   {p.figure}
                 </p>

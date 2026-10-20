@@ -6,6 +6,9 @@ import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { ThemeProvider } from "@/components/theme-provider";
 
+// Pages depend on the passcode cookie, so render them per request.
+export const dynamic = "force-dynamic";
+
 const montserratFont = Montserrat({ subsets: ["latin"] });
 
 export const metadata: Metadata = {

@@ -1,16 +1,16 @@
 "use client";
 
-import { Project } from "contentlayer/generated";
+import type { CardProject } from "@/lib/projects";
 import { useState } from "react";
 import { PortfolioCard } from "./portfolio-card";
 
 const filters = [
   { label: "All", match: () => true },
-  { label: "Built 0 to 1", match: (p: Project) => p.stage === "0 to 1" },
-  { label: "Owned end to end", match: (p: Project) => !!p.endToEnd },
+  { label: "Built 0 to 1", match: (p: CardProject) => p.stage === "0 to 1" },
+  { label: "Owned end to end", match: (p: CardProject) => !!p.endToEnd },
 ];
 
-export const PortfolioFilter = ({ projects }: { projects: Project[] }) => {
+export const PortfolioFilter = ({ projects }: { projects: CardProject[] }) => {
   const [active, setActive] = useState(filters[0].label);
   const filter = filters.find((f) => f.label === active) ?? filters[0];
   const shown = projects.filter(filter.match);

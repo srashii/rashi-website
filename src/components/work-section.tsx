@@ -1,13 +1,16 @@
 import { siteConfig } from "@/site.config";
+import { isUnlocked } from "@/lib/lock";
+import { redactDeep } from "@/lib/redact";
 import { ArrowDownToLine } from "lucide-react";
 
-export const WorkSection = () => {
+export const WorkSection = async () => {
+  const experience = (await isUnlocked()) ? siteConfig.experience : redactDeep(siteConfig.experience);
   return (
     <section className="my-24  px-5 xl:px-0">
       <h2 className="mb-8 max-w-lg font-serif text-5xl leading-tight text-accent md:mb-12 md:text-8xl">
         Experience
       </h2>
-      {siteConfig.experience.map((e, id) => {
+      {experience.map((e, id) => {
         return (
           <>
             <div className=" md:my-5  md:flex md:items-start md:p-3" key={id}>
@@ -24,7 +27,7 @@ export const WorkSection = () => {
               </div>
               <p className="my-4 ml-auto text-sm uppercase">{e.timePeriod}</p>
             </div>
-            {id !== siteConfig.experience.length - 1 && (
+            {id !== experience.length - 1 && (
               <hr className="my-4 dark:border-slate-500 md:my-8" />
             )}
           </>
