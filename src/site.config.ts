@@ -45,7 +45,7 @@ export const siteConfig = {
       },
       {
         figure: "15K to ~1.2M",
-        label: "Tanya users, from launch week in August 2021 to monthly active users by December 2021",
+        label: "Tanya users, from launch week in August to monthly active users by December",
         detail: "~5M total users",
       },
     ],
@@ -78,7 +78,7 @@ export const siteConfig = {
       role: "Lead Product Manager",
       timePeriod: "2021 - 2024",
       description: `
-      - Built Tanya, the photo-to-solution homework app, from 0 to 1: 15K users in launch week (August 2021) to ~1.2M MAU by December 2021\n
+      - Built Tanya, the photo-to-solution homework app, from 0 to 1: 15K users in launch week (August) to ~1.2M MAU by December\n
       - Grew paid live-class students from ~10K to ~200K per semester in about two years (about $2M a year in revenue), with referral as the biggest channel\n
       - Reached 75% semester renewal organically with early teacher selection and weekly parent reports\n
       - Reduced onboarding time by 97% and weekly support time by 60% through automation and an in-app chatbot\n
