@@ -8,7 +8,8 @@ import { LockedDesigns } from "@/components/locked-designs";
 import { Redacted } from "@/components/redacted";
 import { UnlockButton } from "@/components/unlock";
 import { isUnlocked } from "@/lib/lock";
-import { redactText } from "@/lib/redact";
+import { redactText, sentencesWithoutNumbers, titleWithoutNumbers } from "@/lib/redact";
+import { siteConfig } from "@/site.config";
 import { ArrowLeft } from "lucide-react";
 
 interface ProjectProps {
@@ -31,14 +32,15 @@ export async function generateMetadata({
     return {};
   }
 
-  // Link previews are fetched without the passcode, so they get the locked text and the site-wide image.
-  const title = redactText(project.title);
-  const description = redactText(project.problem);
+  // Link previews are fetched without the passcode, so titles and descriptions leave out figures
+  // and use the site-wide image rather than the locked design screens.
+  const title = titleWithoutNumbers(project.title);
+  const description = sentencesWithoutNumbers(project.problem) || siteConfig.description;
 
   return {
     title,
     description,
-    openGraph: { title, description },
+    openGraph: { title, description, images: [{ url: "/og-image.png", width: 1200, height: 630 }] },
   };
 }
 
