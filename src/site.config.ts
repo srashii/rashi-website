@@ -27,7 +27,7 @@ export const siteConfig = {
       {
         figure: "18.5 to 23.8",
         label: "chat messages sent per user per day, in six months",
-        revenue: "~$1.2M from chat monetisation, in 6 months",
+        revenue: "~$1.2M revenue from chat monetisation, in its first 6 months",
       },
     ],
     earlierTitle: "Before Botim, at CoLearn",
