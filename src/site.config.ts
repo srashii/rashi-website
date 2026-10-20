@@ -17,7 +17,7 @@ export const siteConfig = {
     proof: [
       {
         figure: "3.5% to 8%",
-        label: "of monthly active users transacting on fintech, in one year",
+        label: "of monthly active users transacting on fintech in one year, shared with the Growth team",
         revenue: "AED 948K (~$258K) incremental revenue, in one year",
       },
       {
