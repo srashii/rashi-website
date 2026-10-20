@@ -22,7 +22,8 @@ export const siteConfig = {
       },
       {
         figure: "65%",
-        label: "reduction in spam-caller complaints to support, from 3.7 to 1.3 per million calls",
+        label: "reduction in spam-caller complaints to support",
+        detail: "From 3.7 to 1.3 complaints per million calls",
       },
       {
         figure: "18.5 to 23.8",
