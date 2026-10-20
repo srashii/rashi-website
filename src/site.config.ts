@@ -33,6 +33,7 @@ export const siteConfig = {
       {
         figure: "18.5 to 23.8",
         label: "chat messages sent per user per day, in six months",
+        detail: "1.17M Chat DAU",
       },
     ],
     earlierTitle: "Before Botim, at CoLearn",
