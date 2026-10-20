@@ -30,6 +30,18 @@ export const siteConfig = {
         revenue: "~$1.2M from chat monetisation, in 6 months",
       },
     ],
+    earlierTitle: "Before Botim, at CoLearn",
+    earlierProof: [
+      {
+        figure: "~10K to ~200K",
+        label: "paid live-class students per semester, in about two years",
+        revenue: "Roughly $1–2M a month in live-class revenue",
+      },
+      {
+        figure: "15K to ~1.2M",
+        label: "Tanya users, from launch week to monthly active users by December",
+      },
+    ],
   },
   header: {
     logoName: 'Rashi'

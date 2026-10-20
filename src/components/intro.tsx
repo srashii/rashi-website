@@ -36,24 +36,31 @@ const Intro = () => {
         {hero.summary}
       </p>
 
-      <h2 className="mt-10 text-sm font-bold uppercase tracking-wide text-accent">
-        {hero.highlightsTitle}
-      </h2>
-      <ul className="mt-3 grid list-none gap-3 p-0 md:grid-cols-3 md:gap-4">
-        {hero.proof.map((p) => (
-          <li key={p.figure} className="rounded-2xl bg-[#f1eefe] p-4 dark:bg-slate-700 md:p-5">
-            <p className="whitespace-nowrap text-2xl font-bold tabular-nums text-accent md:text-4xl">
-              {p.figure}
-            </p>
-            <p className="mt-1 text-sm text-slate-700 dark:text-slate-200 md:mt-2 md:text-base">{p.label}</p>
-            {"revenue" in p && p.revenue && (
-              <p className="mt-3 border-t border-accent/30 pt-3 text-sm font-bold text-slate-900 dark:text-white md:text-base">
-                {p.revenue}
-              </p>
-            )}
-          </li>
-        ))}
-      </ul>
+      {[
+        { title: hero.highlightsTitle, proof: hero.proof },
+        { title: hero.earlierTitle, proof: hero.earlierProof },
+      ].map((group) => (
+        <div key={group.title}>
+          <h2 className="mt-8 text-sm font-bold uppercase tracking-wide text-accent">
+            {group.title}
+          </h2>
+          <ul className="mt-3 grid list-none gap-3 p-0 md:grid-cols-3 md:gap-4">
+            {group.proof.map((p) => (
+              <li key={p.figure} className="rounded-2xl bg-[#f1eefe] p-4 dark:bg-slate-700 md:p-5">
+                <p className="whitespace-nowrap text-2xl font-bold tabular-nums text-accent md:text-4xl">
+                  {p.figure}
+                </p>
+                <p className="mt-1 text-sm text-slate-700 dark:text-slate-200 md:mt-2 md:text-base">{p.label}</p>
+                {"revenue" in p && p.revenue && (
+                  <p className="mt-3 border-t border-accent/30 pt-3 text-sm font-bold text-slate-900 dark:text-white md:text-base">
+                    {p.revenue}
+                  </p>
+                )}
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
 
       <div className="mt-8 flex flex-wrap gap-3">
         <a
